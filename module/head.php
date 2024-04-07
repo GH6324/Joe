@@ -20,25 +20,25 @@
 <link rel="stylesheet" href="<?= joe\theme_url('assets/css/joe.normalize.min.css'); ?>">
 <link rel="stylesheet" href="<?= joe\theme_url('assets/css/joe.global.min.css'); ?>">
 <link rel="stylesheet" href="<?= joe\theme_url('assets/css/joe.responsive.min.css'); ?>">
-<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/typecho-joe-next@6.0.0/plugin/qmsg/qmsg.css">
-<link rel="stylesheet" href="//cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-<link rel="stylesheet" href="//cdn.staticfile.org/animate.css/3.7.2/animate.min.css" />
-<link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="//cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css">
-<script src="//cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
-<script src="<?= joe\theme_url('assets/js/joe.scroll.min.js'); ?>"></script>
-<script src="//cdn.staticfile.org/lazysizes/5.3.0/lazysizes.min.js"></script>
-<script src="//cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
-<script src="//cdn.bootcdn.net/ajax/libs/color-thief/2.3.2/color-thief.min.js"></script>
+<link rel="stylesheet" href="<?= joe\theme_url('assets/libs/qmsg/message.min.css'); ?>">
+<link rel="stylesheet" href="<?= joe\theme_url('assets/libs/fancybox/jquery.fancybox.min.css'); ?>" />
+<link rel="stylesheet" href="<?= joe\theme_url('assets/libs/animate/animate.min.css'); ?>" />
+<link rel="stylesheet" href="<?= joe\theme_url('assets/libs/fontawesome/fontawesome.min.css'); ?>">
+<link rel="stylesheet" href="<?= joe\theme_url('assets/libs/APlayer/APlayer.min.css'); ?>">
+<script src="<?= joe\theme_url('assets/libs/jquery/jquery.min.js'); ?>"></script>
+<script src="<?= joe\theme_url('assets/libs/smoothscroll/smoothscroll.min.js'); ?>"></script>
+<script src="<?= joe\theme_url('assets/libs/lazysizes/lazysizes.min.js'); ?>"></script>
+<script src="<?= joe\theme_url('assets/libs/APlayer/APlayer.min.js'); ?>"></script>
+<script src="<?= joe\theme_url('assets/libs/color-thief/color-thief.min.js'); ?>"></script>
 <script src="<?= joe\theme_url('assets/js/MusicPlayer.min.js'); ?>"></script>
-<script src="<?= joe\theme_url('assets/js/joe.sketchpad.min.js'); ?>"></script>
-<script src="//cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="<?= joe\theme_url('assets/libs/sketchpad/sketchpad.min.js'); ?>"></script>
+<script src="<?= joe\theme_url('assets/libs/fancybox/jquery.fancybox.min.js'); ?>"></script>
 <script src="<?= joe\theme_url('assets/js/joe.extend.min.js'); ?>"></script>
-<script src="https://fastly.jsdelivr.net/npm/typecho-joe-next@6.0.0/plugin/qmsg/qmsg.js"></script>
+<script src="<?= joe\theme_url('assets/libs/qmsg/message.min.js'); ?>"></script>
 <?php if ($this->options->JAside_3DTag === 'on') : ?>
-	<script src="https://fastly.jsdelivr.net/npm/typecho-joe-next@6.2.3/plugin/3dtag/3dtag.min.js"></script>
+	<script src="<?= joe\theme_url('assets/libs/svg3dtagcloud/jquery.svg3dtagcloud.min.js'); ?>"></script>
 <?php endif; ?>
-<script src="<?= joe\theme_url('assets/js/joe.smooth.min.js'); ?>" async></script>
+<script src="<?= joe\theme_url('assets/libs/SmoothScroll-for-websites/SmoothScroll.min.js'); ?>" async></script>
 <?php if ($this->options->JCursorEffects && $this->options->JCursorEffects !== 'off') : ?>
 	<script src="<?= joe\theme_url('assets/cursor/' . $this->options->JCursorEffects) ?>" async></script>
 <?php endif; ?>

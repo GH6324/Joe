@@ -153,7 +153,7 @@ $JLive2d = new Typecho_Widget_Helper_Form_Element_Select(
 	'JLive2d',
 	array(
 		'off' => '关闭（默认）',
-		'https://fastly.jsdelivr.net/npm/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json' => '志津久(shizuku)',
+		'https://fastly.r.net/npm/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json' => '志津久(shizuku)',
 		'https://fastly.jsdelivr.net/npm/live2d-widget-model-izumi@1.0.5/assets/izumi.model.json' => '泉(izumi)',
 		'https://fastly.jsdelivr.net/npm/live2d-widget-model-haru@1.0.5/01/assets/haru01.model.json' => '李夏露01(haru01)',
 		'https://fastly.jsdelivr.net/npm/live2d-widget-model-haru@1.0.5/02/assets/haru02.model.json' => '李夏露02(haru02)',

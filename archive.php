@@ -3,7 +3,7 @@
 
 <head>
     <?php $this->need('module/head.php'); ?>
-    <script src="https://fastly.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+    <script src="<?= joe\theme_url('assets/libs/wowjs/wow.min.js'); ?>"></script>
     <link rel="stylesheet" href="<?= joe\theme_url('assets/css/joe.archive.min.css'); ?>">
     <script src="<?= joe\theme_url('assets/js/joe.archive.min.js'); ?>"></script>
 </head>
