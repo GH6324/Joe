@@ -54,8 +54,8 @@ $form->addInput($JHeader_Counter->multiMode());
 
 $JFooter_Fish = new Typecho_Widget_Helper_Form_Element_Select(
 	'JFooter_Fish',
-	array('on' => '开启（默认）', 'off' => '关闭'),
-	'on',
+	array('on' => '开启', 'off' => '关闭（默认）'),
+	'off',
 	'是否开启底部鱼群跳跃',
 	'介绍：开启后页面底部位置将会展示灵动的鱼群跳跃，增添网站灵动气氛'
 );
