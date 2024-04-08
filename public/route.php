@@ -187,103 +187,103 @@ function _handleAgree($self)
 }
 
 /* 查询是否收录 已测试 √ */
-function _getRecord($self)
-{
-	$self->response->setStatus(200);
-	$client = new \network\http\Client;
-	$client->param([
-		'ie' => 'utf8',
-		'wd' => $self->request->site
-	]);
-	$client->header([
-		'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-		'Accept-Encoding: gzip, deflate',
-		'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
-		'Connection: keep-alive',
-		'Host: www.baidu.com',
-		'Referer: https://wappass.baidu.com/',
-		'sec-ch-ua: " Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"',
-		'sec-ch-ua-mobile: ?0',
-		'sec-ch-ua-platform: "Windows"',
-		'Sec-Fetch-Dest: document',
-		'Sec-Fetch-Mode: navigate',
-		'Sec-Fetch-Site: same-site',
-		'Sec-Fetch-User: ?1',
-		'Upgrade-Insecure-Requests: 1',
-		'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.77',
-		'Cookie: __yjs_duid=1_ac4d0f87736bc5e2ab5596ce1a7367601643347382579; H_WISE_SIDS=110085_127969_179345_184716_185637_189755_191068_191251_192385_194085_194529_195343_196425_196527_197242_197711_197956_198418_199022_199313_199568_199996_200149_200960_200993_201108_201192_201545_201707_202059_202759_202910_203309_203360_203519_203605_203886_204031_204132_204265_204322_204405_204432_204675_204725_204824_204859_204919_204940_205009_205087_205094_205218_205380_205386_205412_205485_205656_205690_205710_205831_205847_205919_206098_206283_206476_206767_206927_207005_207124_207136_207212_207234_207363_207497_207506_8000076_8000128_8000140_8000150_8000159_8000163_8000167_8000177_8000179_8000186; BD_UPN=12314753; PSTM=1656921064; BIDUPSID=1C10D9F853DBCC6E9738B268FCC46875; BAIDUID=40E6CCC7EEB3D860EB05C626C3F2C44B:FG=1; H_WISE_SIDS_BFESS=110085_127969_179345_184716_185637_189755_191068_191251_192385_194085_194529_195343_196425_196527_197242_197711_197956_198418_199022_199313_199568_199996_200149_200960_200993_201108_201192_201545_201707_202059_202759_202910_203309_203360_203519_203605_203886_204031_204132_204265_204322_204405_204432_204675_204725_204824_204859_204919_204940_205009_205087_205094_205218_205380_205386_205412_205485_205656_205690_205710_205831_205847_205919_206098_206283_206476_206767_206927_207005_207124_207136_207212_207234_207363_207497_207506_8000076_8000128_8000140_8000150_8000159_8000163_8000167_8000177_8000179_8000186; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; BA_HECTOR=81al8g05a48lal01052l1cdj1heel6a16; ZFY=UN3DgzqvtqoeRQZLRr7OUad79UfJKR3Npye2ytuzKYQ:C; delPer=0; PSINO=2; BD_HOME=1; H_PS_PSSID=36832_36559_36753_36726_36413_36955_36167_36918_36570_36804_36965_36740_26350_22160'
-	]);
-	$output = $client->get('https://www.baidu.com/s');
-	$res = str_replace([' ', "\n", "\r"], '', $output);
-	if ((strpos($res, "抱歉，没有找到与")) || (strpos($res, "找到相关结果约0个")) || (strpos($res, "没有找到该URL")) || (strpos($res, "抱歉没有找到"))) {
-		$self->response->throwJson(array("data" => "未收录"));
-	}
-	if ((strpos($res, '页面不存在_百度搜索')) || (strpos($res, '百度安全验证'))) {
-		$self->response->throwJson(array("data" => "检测失败"));
-	}
-	$self->response->throwJson(array("data" => "已收录"));
-}
+// function _getRecord($self)
+// {
+// 	$self->response->setStatus(200);
+// 	$client = new \network\http\Client;
+// 	$client->param([
+// 		'ie' => 'utf8',
+// 		'wd' => $self->request->site
+// 	]);
+// 	$client->header([
+// 		'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+// 		'Accept-Encoding: gzip, deflate',
+// 		'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+// 		'Connection: keep-alive',
+// 		'Host: www.baidu.com',
+// 		'Referer: https://wappass.baidu.com/',
+// 		'sec-ch-ua: " Not;A Brand";v="99", "Microsoft Edge";v="103", "Chromium";v="103"',
+// 		'sec-ch-ua-mobile: ?0',
+// 		'sec-ch-ua-platform: "Windows"',
+// 		'Sec-Fetch-Dest: document',
+// 		'Sec-Fetch-Mode: navigate',
+// 		'Sec-Fetch-Site: same-site',
+// 		'Sec-Fetch-User: ?1',
+// 		'Upgrade-Insecure-Requests: 1',
+// 		'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.77',
+// 		'Cookie: __yjs_duid=1_ac4d0f87736bc5e2ab5596ce1a7367601643347382579; H_WISE_SIDS=110085_127969_179345_184716_185637_189755_191068_191251_192385_194085_194529_195343_196425_196527_197242_197711_197956_198418_199022_199313_199568_199996_200149_200960_200993_201108_201192_201545_201707_202059_202759_202910_203309_203360_203519_203605_203886_204031_204132_204265_204322_204405_204432_204675_204725_204824_204859_204919_204940_205009_205087_205094_205218_205380_205386_205412_205485_205656_205690_205710_205831_205847_205919_206098_206283_206476_206767_206927_207005_207124_207136_207212_207234_207363_207497_207506_8000076_8000128_8000140_8000150_8000159_8000163_8000167_8000177_8000179_8000186; BD_UPN=12314753; PSTM=1656921064; BIDUPSID=1C10D9F853DBCC6E9738B268FCC46875; BAIDUID=40E6CCC7EEB3D860EB05C626C3F2C44B:FG=1; H_WISE_SIDS_BFESS=110085_127969_179345_184716_185637_189755_191068_191251_192385_194085_194529_195343_196425_196527_197242_197711_197956_198418_199022_199313_199568_199996_200149_200960_200993_201108_201192_201545_201707_202059_202759_202910_203309_203360_203519_203605_203886_204031_204132_204265_204322_204405_204432_204675_204725_204824_204859_204919_204940_205009_205087_205094_205218_205380_205386_205412_205485_205656_205690_205710_205831_205847_205919_206098_206283_206476_206767_206927_207005_207124_207136_207212_207234_207363_207497_207506_8000076_8000128_8000140_8000150_8000159_8000163_8000167_8000177_8000179_8000186; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; BA_HECTOR=81al8g05a48lal01052l1cdj1heel6a16; ZFY=UN3DgzqvtqoeRQZLRr7OUad79UfJKR3Npye2ytuzKYQ:C; delPer=0; PSINO=2; BD_HOME=1; H_PS_PSSID=36832_36559_36753_36726_36413_36955_36167_36918_36570_36804_36965_36740_26350_22160'
+// 	]);
+// 	$output = $client->get('https://www.baidu.com/s');
+// 	$res = str_replace([' ', "\n", "\r"], '', $output);
+// 	if ((strpos($res, "抱歉，没有找到与")) || (strpos($res, "找到相关结果约0个")) || (strpos($res, "没有找到该URL")) || (strpos($res, "抱歉没有找到"))) {
+// 		$self->response->throwJson(array("data" => "未收录"));
+// 	}
+// 	if ((strpos($res, '页面不存在_百度搜索')) || (strpos($res, '百度安全验证'))) {
+// 		$self->response->throwJson(array("data" => "检测失败"));
+// 	}
+// 	$self->response->throwJson(array("data" => "已收录"));
+// }
 
 /* 主动推送到百度收录 已测试 √ */
-function _pushRecord($self)
-{
-	$self->response->setStatus(200);
-	$token = Helper::options()->JBaiduToken;
-	$domain = $self->request->domain;
-	$url = $self->request->url;
-	$urls = explode(",", $url);
-	$api = "http://data.zz.baidu.com/urls?site={$domain}&token={$token}";
-	$ch = curl_init();
-	$options =  array(
-		CURLOPT_URL => $api,
-		CURLOPT_POST => true,
-		CURLOPT_RETURNTRANSFER => true,
-		CURLOPT_POSTFIELDS => implode("\n", $urls),
-		CURLOPT_HTTPHEADER => array('Content-Type: text/plain'),
-	);
-	curl_setopt_array($ch, $options);
-	$result = curl_exec($ch);
-	curl_close($ch);
-	$self->response->throwJson(array(
-		'domain' => $domain,
-		'url' => $url,
-		'data' => json_decode($result, TRUE)
-	));
-}
+// function _pushRecord($self)
+// {
+// 	$self->response->setStatus(200);
+// 	$token = Helper::options()->JBaiduToken;
+// 	$domain = $self->request->domain;
+// 	$url = $self->request->url;
+// 	$urls = explode(",", $url);
+// 	$api = "http://data.zz.baidu.com/urls?site={$domain}&token={$token}";
+// 	$ch = curl_init();
+// 	$options =  array(
+// 		CURLOPT_URL => $api,
+// 		CURLOPT_POST => true,
+// 		CURLOPT_RETURNTRANSFER => true,
+// 		CURLOPT_POSTFIELDS => implode("\n", $urls),
+// 		CURLOPT_HTTPHEADER => array('Content-Type: text/plain'),
+// 	);
+// 	curl_setopt_array($ch, $options);
+// 	$result = curl_exec($ch);
+// 	curl_close($ch);
+// 	$self->response->throwJson(array(
+// 		'domain' => $domain,
+// 		'url' => $url,
+// 		'data' => json_decode($result, TRUE)
+// 	));
+// }
 
 // 主动推送到必应收录
-function _pushBing($self)
-{
-	$self->response->setStatus(200);
-	$token = Helper::options()->JBingToken;
-	if (empty($token)) {
-		exit;
-	}
-	$domain = $self->request->domain;  //网站域名
-	$url = $self->request->url;
-	$urls = explode(",", $url);  //要推送的url
-	$api = "https://www.bing.com/webmaster/api.svc/json/SubmitUrlbatch?apikey=$token";
-	$data = array(
-		'siteUrl' => $domain,
-		'urlList' => $urls
-	);
-	$ch = curl_init();
-	$options =  array(
-		CURLOPT_URL => $api,
-		CURLOPT_POST => true,
-		CURLOPT_RETURNTRANSFER => true,
-		CURLOPT_POSTFIELDS => json_encode($data),
-		CURLOPT_HTTPHEADER => array('Content-Type: application/json; charset=utf-8', 'Host: ssl.bing.com'),
-	);
-	curl_setopt_array($ch, $options);
-	$result = curl_exec($ch);
-	curl_close($ch);
-	$self->response->throwJson(array(
-		'domain' => $domain,
-		'url' => $url,
-		'data' => json_decode($result, TRUE)
-	));
-}
+// function _pushBing($self)
+// {
+// 	$self->response->setStatus(200);
+// 	$token = Helper::options()->JBingToken;
+// 	if (empty($token)) {
+// 		exit;
+// 	}
+// 	$domain = $self->request->domain;  //网站域名
+// 	$url = $self->request->url;
+// 	$urls = explode(",", $url);  //要推送的url
+// 	$api = "https://www.bing.com/webmaster/api.svc/json/SubmitUrlbatch?apikey=$token";
+// 	$data = array(
+// 		'siteUrl' => $domain,
+// 		'urlList' => $urls
+// 	);
+// 	$ch = curl_init();
+// 	$options =  array(
+// 		CURLOPT_URL => $api,
+// 		CURLOPT_POST => true,
+// 		CURLOPT_RETURNTRANSFER => true,
+// 		CURLOPT_POSTFIELDS => json_encode($data),
+// 		CURLOPT_HTTPHEADER => array('Content-Type: application/json; charset=utf-8', 'Host: ssl.bing.com'),
+// 	);
+// 	curl_setopt_array($ch, $options);
+// 	$result = curl_exec($ch);
+// 	curl_close($ch);
+// 	$self->response->throwJson(array(
+// 		'domain' => $domain,
+// 		'url' => $url,
+// 		'data' => json_decode($result, TRUE)
+// 	));
+// }
 
 /* 获取壁纸分类 已测试 √ */
 function _getWallpaperType($self)

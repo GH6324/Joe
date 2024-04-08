@@ -55,27 +55,27 @@ $JPost_Ad = new Typecho_Widget_Helper_Form_Element_Textarea(
 $JPost_Ad->setAttribute('class', 'joe_content joe_post');
 $form->addInput($JPost_Ad);
 
-$JBaiduToken = new Typecho_Widget_Helper_Form_Element_Text(
-	'JBaiduToken',
-	NULL,
-	NULL,
-	'百度推送Token',
-	'介绍：填写此处，前台文章页如果未收录，则会自动将当前链接推送给百度加快收录 <br />
-		 其他：Token在百度收录平台注册账号获取'
-);
-$JBaiduToken->setAttribute('class', 'joe_content joe_post');
-$form->addInput($JBaiduToken);
+// $JBaiduToken = new Typecho_Widget_Helper_Form_Element_Text(
+// 	'JBaiduToken',
+// 	NULL,
+// 	NULL,
+// 	'百度推送Token',
+// 	'介绍：填写此处，前台文章页如果未收录，则会自动将当前链接推送给百度加快收录 <br />
+// 		 其他：Token在百度收录平台注册账号获取'
+// );
+// $JBaiduToken->setAttribute('class', 'joe_content joe_post');
+// $form->addInput($JBaiduToken);
 
-$JBingToken = new Typecho_Widget_Helper_Form_Element_Text(
-	'JBingToken',
-	NULL,
-	NULL,
-	'必应推送Token',
-	'介绍：填写此处，则会自动将当前链接推送给必应加快收录 <br />
-		 其他：Token在必应收录平台注册账号获取'
-);
-$JBingToken->setAttribute('class', 'joe_content joe_post');
-$form->addInput($JBingToken);
+// $JBingToken = new Typecho_Widget_Helper_Form_Element_Text(
+// 	'JBingToken',
+// 	NULL,
+// 	NULL,
+// 	'必应推送Token',
+// 	'介绍：填写此处，则会自动将当前链接推送给必应加快收录 <br />
+// 		 其他：Token在必应收录平台注册账号获取'
+// );
+// $JBingToken->setAttribute('class', 'joe_content joe_post');
+// $form->addInput($JBingToken);
 
 $Jsearch_target = new Typecho_Widget_Helper_Form_Element_Select(
 	'Jsearch_target',

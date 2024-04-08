@@ -29,8 +29,8 @@
                 <span class="text"><?php $this->commentsNum('%d'); ?> 评论</span>
                 <span class="line">/</span>
                 <span class="text" id="Joe_Article_Views"><?php joe\getViews($this); ?> 阅读</span>
-                <span class="line">/</span>
-                <span class="text" id="Joe_Baidu_Record">正在检测是否收录...</span>
+                <!--<span class="line">/</span>
+                <span class="text" id="Joe_Baidu_Record">正在检测是否收录...</span>-->
             </div>
         </div>
     </div>

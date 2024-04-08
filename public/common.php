@@ -44,15 +44,15 @@ function themeInit($self)
 			case 'publish_list':
 				_getPost($self);
 				break;
-			case 'baidu_record':
-				_getRecord($self);
-				break;
-			case 'baidu_push':
-				_pushRecord($self);
-				break;
-			case 'bing_push':
-				_pushBing($self);
-				break;
+			// case 'baidu_record':
+			// 	_getRecord($self);
+			// 	break;
+			// case 'baidu_push':
+			// 	_pushRecord($self);
+			// 	break;
+			// case 'bing_push':
+			// 	_pushBing($self);
+			// 	break;
 			case 'handle_views':
 				_handleViews($self);
 				break;
