@@ -2,7 +2,7 @@
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
-define('JOE_VERSION', '1.30');
+define('JOE_VERSION', '1.0.0');
 define('JOE_ROOT', dirname(__FILE__) . '/');
 
 /* Joe核心文件 */
@@ -39,7 +39,7 @@ function themeConfig($form)
 	<div class="joe_config">
 		<div>
 			<div class="joe_config__aside">
-				<div class="logo">Joe再续前缘<?= JOE_VERSION ?></div>
+				<div class="logo">Joe再续前缘修改版<?= JOE_VERSION ?></div>
 				<ul class="tabs">
 					<li class="item" data-current="joe_notice">最新公告</li>
 					<li class="item" data-current="joe_global">全局设置</li>

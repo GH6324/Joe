@@ -1,11 +1,10 @@
 <?php
 
 /**
- * 环境要求：<br>PHP 7.3 - 8.0<br>Typecho 1.1+
- * @package Joe再续前缘版
- * @author Joe、易航
- * @link http://blog.bri6.cn
- * 二开人：易航
+ * 环境要求：<br>PHP 7.4+<br>Typecho 1.2.1+
+ * @package Joe再续前缘修改版
+ * @author Joe、易航、jd82k
+ * @link https://github.com/jd82k/Joe
  */
 ?>
 

@@ -8,7 +8,7 @@ $JStaticAssetsUrl = new Typecho_Widget_Helper_Form_Element_Text(
 	null,
 	'自定义存储空间资源',
 	'介绍：将本主题所需要的CSS、JS等资源文件使用某个站点来提供，以便节省服务器宽带 提升小型服务器加载速度<br>
-		 注意：必须保证对方站点同样为再续前缘版并且版本一致<br>
+		 注意：必须保证对方站点同样为再续前缘修改版并且版本一致<br>
 		 例如：http://blog.bri6.cn/usr/themes/Joe（此站点虽是同款，然已启用防盗链，无需再试了）<br>
 		 其他：本站同款站点列表 <a target="_blank" href="http://auth.bri6.cn/server/joe/sitelist">auth.bri6.cn/server/joe/sitelist</a>'
 );
