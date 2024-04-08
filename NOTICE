@@ -5,10 +5,10 @@
 <br>修改简介：本主题是继前人<a href="http://blog.bri6.cn/" target="_blank" rel="noopener noreferrer">易航</a>修改原作者<a href="https://78.al/">Joe</a>主题后的第二次修改，具体更新如下
 <ol>
 	<li>继承易航修改的Joe再续前缘版，Joe再续前缘版的修改细节请到<a href="http://blog.bri6.cn/archives/18.html" target="_blank" rel="noopener noreferrer">http://blog.bri6.cn/archives/18.html</a>查看</li>
-	<li>大部分CDN资源（css、js、t图片等）本地化，防止CDN失效，也方便自行整合静态资源CDN</li>
+	<li>大部分CDN资源（css、js、图片等）本地化，防止CDN失效，也方便自行整合静态资源CDN</li>
 	<li>恢复部分被压缩的源代码，保证基本上所有代码全部为可读未压缩的状态</li>
 	<li>删除无用功能：百度收录，增加声明文章为转载的功能</li>
 	<li>优化主题配置的默认项，删除无用的默认值</li>
 	<li>优化文章链接的默认打开方式</li>
 </ol>
-建议想要使用本主题的手动备份所有设置后删除主题文件夹，再将本文件夹上传到theme目录，不要覆盖
+使用本主题需要手动备份所有设置后删除原Joe文件夹，再将本主题的Joe文件夹上传到theme目录，不要图省事覆盖
