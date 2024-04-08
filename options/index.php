@@ -18,10 +18,9 @@ $form->addInput($JIndex_Article_Double_Column->multiMode());
 $JIndex_Header_Img = new Typecho_Widget_Helper_Form_Element_Textarea(
 	'JIndex_Header_Img',
 	NULL,
-	'http://p7.qhimg.com/bdr/__85/t014d46a590e4d07543.jpg',
+	NULL,
 	'首页顶部大图背景壁纸',
-	'格式：图片地址 或 Base64地址<br>
-		 填写 “透明” 即使用透明壁纸 可配合背景壁纸使用'
+	'格式：图片地址 或 Base64地址'
 );
 $JIndex_Header_Img->setAttribute('class', 'joe_content joe_index');
 $form->addInput($JIndex_Header_Img);
@@ -60,12 +59,12 @@ $form->addInput($JIndex_Carousel_Target->multiMode());
 $Jessay_target = new Typecho_Widget_Helper_Form_Element_Select(
 	'Jessay_target',
 	array(
-		'_blank' => '_blank（默认，新窗口）',
+		'_blank' => '_blank（新窗口）',
 		'_parent' => '_parent（当前窗口）',
-		'_self' => '_self（同窗口）',
+		'_self' => '_self（默认，同窗口）',
 		'_top' => '_top（顶端打开窗口）',
 	),
-	'_blank',
+	'_self',
 	'首页文章列表打开方式',
 );
 $Jessay_target->setAttribute('class', 'joe_content joe_index');

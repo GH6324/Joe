@@ -38,7 +38,7 @@ $form->addInput($JCommentSMTPSecure->multiMode());
 $JCommentMailPort = new Typecho_Widget_Helper_Form_Element_Text(
 	'JCommentMailPort',
 	NULL,
-	NULL,
+	'465',
 	'邮箱服务器端口号',
 	'例如：465'
 );

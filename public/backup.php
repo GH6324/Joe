@@ -54,7 +54,7 @@ if (isset($_POST['type'])) {
 	?>
 <?php } ?>
 <form class="backup" action="?Joe_backup" method="post">
-	<input type="button" id="update" value="检测更新">
+	<!--<input type="button" id="update" value="检测更新">-->
 	<input type="submit" name="type" value="备份设置" />
 	<input type="submit" name="type" value="还原备份" />
 	<input type="submit" name="type" value="删除备份" />

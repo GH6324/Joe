@@ -30,7 +30,9 @@ function themeConfig($form)
 			title: `<?php trim(Helper::options()->title()) ?>`,
 			version: `<?= trim(JOE_VERSION) ?>`,
 			logo: `<?php trim(Helper::options()->JLogo()) ?>`,
-			Favicon: `<?php trim(Helper::options()->JFavicon()) ?>`
+			Favicon: `<?php trim(Helper::options()->JFavicon()) ?>`,
+			// domain: window.location.host,
+			// service_domain: '//auth.bri6.cn/server/joe/'
 		}
 	</script>
 	<script src="<?= joe\theme_url('assets/typecho/config/js/joe.config.min.js') ?>"></script>

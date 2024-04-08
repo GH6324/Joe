@@ -10,7 +10,7 @@ $JPost_Header_Img_Switch = new Typecho_Widget_Helper_Form_Element_Select(
 	),
 	'on',
 	'是否开启文章页面顶部大图',
-	'介绍：开启后顶部大图将背景将使用文章缩略图 文字将使用文字标题 如果没有文章没有缩略图那么使用首页顶部大图和侧边栏随机一言充当文字'
+	'介绍：开启后顶部大图背景将使用文章缩略图 文字将使用文字标题 如果没有文章没有缩略图那么使用首页顶部大图和侧边栏随机一言充当文字'
 );
 $JPost_Header_Img_Switch->setAttribute('class', 'joe_content joe_post');
 $form->addInput($JPost_Header_Img_Switch);
@@ -80,12 +80,12 @@ $form->addInput($JPost_Ad);
 $Jsearch_target = new Typecho_Widget_Helper_Form_Element_Select(
 	'Jsearch_target',
 	array(
-		'_blank' => '_blank（默认，新窗口）',
+		'_blank' => '_blank（新窗口）',
 		'_parent' => '_parent（当前窗口）',
-		'_self' => '_self（同窗口）',
+		'_self' => '_self（默认，同窗口）',
 		'_top' => '_top（顶端打开窗口）',
 	),
-	'_blank',
+	'_self',
 	'其他页面文章列表打开方式',
 );
 $Jsearch_target->setAttribute('class', 'joe_content joe_post');

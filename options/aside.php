@@ -17,7 +17,7 @@ $form->addInput($JAside_Notice);
 $JAside_Author_Nick = new Typecho_Widget_Helper_Form_Element_Text(
 	'JAside_Author_Nick',
 	NULL,
-	"Typecho",
+	NULL,
 	'博主栏博主昵称 - PC/WAP',
 	'介绍：用于修改博主栏的博主昵称 <br />
 		 注意：如果不填写时则显示 *个人设置* 里的昵称'
@@ -39,7 +39,7 @@ $form->addInput($JAside_Author_Avatar);
 $JAside_Author_Image = new Typecho_Widget_Helper_Form_Element_Textarea(
 	'JAside_Author_Image',
 	NULL,
-	"https://fastly.jsdelivr.net/npm/typecho-joe-next@6.0.0/assets/img/aside_author_image.jpg",
+	joe\theme_url("assets/images/aside_author_image.jpg"),
 	'博主栏背景壁纸 - PC',
 	'介绍：用于修改PC端博主栏的背景壁纸 <br/>
 		 格式：图片地址 或 Base64地址'
@@ -50,7 +50,7 @@ $form->addInput($JAside_Author_Image);
 $JAside_Wap_Image = new Typecho_Widget_Helper_Form_Element_Textarea(
 	'JAside_Wap_Image',
 	NULL,
-	"https://fastly.jsdelivr.net/npm/typecho-joe-next@6.0.0/assets/img/wap_aside_image.jpg",
+	joe\theme_url("assets/images/wap_aside_image.jpg"),
 	'博主栏背景壁纸 - WAP',
 	'介绍：用于修改移动端博主栏的背景壁纸 <br/>
 		 格式：图片地址 或 Base64地址'
@@ -72,7 +72,7 @@ $form->addInput($JAside_Wap_Image_Height);
 $JAside_Author_Link = new Typecho_Widget_Helper_Form_Element_Text(
 	'JAside_Author_Link',
 	NULL,
-	"http://blog.bri6.cn",
+	Helper::options()->rootUrl."/",
 	'博主栏昵称跳转地址 - PC/WAP',
 	'介绍：用于修改博主栏点击博主昵称后的跳转地址'
 );
@@ -82,7 +82,7 @@ $form->addInput($JAside_Author_Link);
 $JAside_Author_Motto = new Typecho_Widget_Helper_Form_Element_Textarea(
 	'JAside_Author_Motto',
 	NULL,
-	'//web.bri6.cn/api/随机一言/api.php',
+	NULL,
 	'博主栏座右铭（一言）- PC/WAP',
 	'介绍：用于修改博主栏的座右铭（一言） <br />
 		 格式：可以填写多行也可以填写一行，填写多行时，每次随机显示其中的某一条，也可以填写API地址 <br />
