@@ -140,7 +140,7 @@ function getAvatarByMail($mail)
 		$authoInfo = $db->fetchRow($db->select()->from('table.users')->where('uid = ?', 1));
 		$mail = $authoInfo['mail'];
 	}
-	$gravatarsUrl = \Helper::options()->JCustomAvatarSource ? \Helper::options()->JCustomAvatarSource : 'https://gravatar.helingqi.com/wavatar/';
+	$gravatarsUrl = \Helper::options()->JCustomAvatarSource ? \Helper::options()->JCustomAvatarSource : 'https://cdn.helingqi.com/wavatar/';
 	$mailLower = strtolower($mail);
 	$md5MailLower = md5($mailLower);
 	$qqMail = str_replace('@qq.com', '', $mailLower);
@@ -216,7 +216,7 @@ function getThumbnails($item)
 			}
 		} else {
 			for ($i = 0; $i < 3; $i++) {
-				$result[] = 'https://fastly.jsdelivr.net/npm/typecho-joe-next@6.0.0/assets/thumb/' . rand(1, 42) . '.jpg';
+				$result[] = joe\theme_url('assets/thumb/') . rand(1, 42) . '.jpg';
 			}
 		}
 	}
