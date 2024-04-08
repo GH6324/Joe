@@ -9,22 +9,22 @@ if (Helper::options()->JPrevent == 'on' && (strpos($_SERVER['HTTP_USER_AGENT'], 
 }
 
 /* 继承方法函数 */
-require_once('widget.php');
+require_once ('widget.php');
 
 /* Composer自动加载 */
-require_once(JOE_ROOT . 'vendor/autoload.php');
+require_once (JOE_ROOT . 'vendor/autoload.php');
 
 /* 公用函数 */
-require_once('function.php');
+require_once ('function.php');
 
 /* 过滤内容函数 */
-require_once('parse.php');
+require_once ('parse.php');
 
 /* 主题内置开放API */
-require_once('route.php');
+require_once ('route.php');
 
 /* 插件方法 */
-require_once('factory.php');
+require_once ('factory.php');
 
 /* 主题初始化 */
 function themeInit($self)
@@ -80,14 +80,15 @@ function themeInit($self)
 			case 'article_filing':
 				_getArticleFiling($self);
 				break;
-				// 提交友链
+			// 提交友链
 			case 'friend_submit':
 				_friendSubmit($self);
 				break;
 			case 'statistics':
 				_getstatistics($self);
 				break;
-		};
+		}
+		;
 	}
 
 	if (Helper::options()->JUser_Switch == 'on') {
@@ -129,6 +130,15 @@ function themeInit($self)
 /* 增加自定义字段 */
 function themeFields($layout)
 {
+	//增加文章来源URL功能
+	$reference = new Typecho_Widget_Helper_Form_Element_Text(
+		'reference',
+		NULL,
+		NULL,
+		'文章来源URL',
+		'介绍：用于设置当前文章的来源信息，为空显示为原创'
+	);
+	$layout->addItem($reference);
 
 	$mode = new Typecho_Widget_Helper_Form_Element_Select(
 		'mode',
