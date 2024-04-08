@@ -16,4 +16,4 @@
 1. 感谢原作者Joe https://78.al
 2. 感谢修改者易航 http://blog.bri6.cn
 
-> 请给个Star再走呀
+> 使用过程中bugs请在issues反馈，看到后会及时修复
