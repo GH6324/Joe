@@ -5,7 +5,7 @@ $this->need('user/header.php');
 <html lang="zh-cn">
 
 <head>
-	<title>账号登陆 - <?php $this->options->title() ?></title>
+	<title>账号登录 - <?php $this->options->title() ?></title>
 	<?php $this->need('module/head.php'); ?>
 	<link href="<?= joe\theme_url('assets/css/joe.user.min.css') ?>" rel="stylesheet" type="text/css" />
 </head>

@@ -216,7 +216,7 @@ function getThumbnails($item)
 			}
 		} else {
 			for ($i = 0; $i < 3; $i++) {
-				$result[] = joe\theme_url('assets/thumb/') . rand(1, 42) . '.jpg';
+				$result[] = theme_url('assets/thumb/' . rand(1, 42) . '.jpg');
 			}
 		}
 	}

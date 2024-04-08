@@ -41,7 +41,7 @@ $form->addInput($JThumbnail);
 $JLazyload = new Typecho_Widget_Helper_Form_Element_Textarea(
 	'JLazyload',
 	NULL,
-	joe\theme_url("assets/imgages/lazyload.jpg"),
+	joe\theme_url("assets/images/lazyload.jpg"),
 	'自定义懒加载图',
 	'介绍：用于修改主题默认懒加载图 <br/>
 		 格式：图片地址'
