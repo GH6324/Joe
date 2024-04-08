@@ -23,7 +23,8 @@
 <link rel="stylesheet" href="<?= joe\theme_url('assets/libs/qmsg/message.min.css'); ?>">
 <link rel="stylesheet" href="<?= joe\theme_url('assets/libs/fancybox/jquery.fancybox.min.css'); ?>" />
 <link rel="stylesheet" href="<?= joe\theme_url('assets/libs/animate/animate.min.css'); ?>" />
-<link rel="stylesheet" href="<?= joe\theme_url('assets/libs/fontawesome/fontawesome.min.css'); ?>">
+<link rel="stylesheet" href="<?= joe\theme_url('assets/libs/fontawesome/css/fontawesome.min.css'); ?>">
+<link rel="stylesheet" href="<?= joe\theme_url('assets/libs/fontawesome/css/solid.min.css'); ?>">
 <link rel="stylesheet" href="<?= joe\theme_url('assets/libs/APlayer/APlayer.min.css'); ?>">
 <script src="<?= joe\theme_url('assets/libs/jquery/jquery.min.js'); ?>"></script>
 <script src="<?= joe\theme_url('assets/libs/smoothscroll/smoothscroll.min.js'); ?>"></script>

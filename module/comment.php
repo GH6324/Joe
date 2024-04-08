@@ -138,7 +138,7 @@ function threadedComments($comments, $options)
 					<div class="handle">
 						<time class="date" datetime="<?php $comments->date('Y-m-d'); ?>"><?php $comments->date('Y-m-d'); ?></time>
 						<span class="reply joe_comment__reply" data-id="<?php $comments->theId(); ?>" data-coid="<?php $comments->coid(); ?>">
-							<i class="icon fa fa-pencil" aria-hidden="true"></i>回复
+							<i class="icon fa-solid fa-pencil" aria-hidden="true"></i>回复
 						</span>
 					</div>
 				</div>
