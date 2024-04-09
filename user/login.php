@@ -6,8 +6,7 @@ $this->need('user/header.php');
 
 <head>
 	<title>账号登录 - <?php $this->options->title() ?></title>
-	<?php $this->need('module/head.php'); ?>
-	<link href="<?= joe\theme_url('assets/css/joe.user.min.css') ?>" rel="stylesheet" type="text/css" />
+	<?php $this->need('user/head.php'); ?>
 </head>
 
 <body>

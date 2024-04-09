@@ -50,7 +50,7 @@ $form->addInput($JCustomNavs);
 $JFooter_Left = new Typecho_Widget_Helper_Form_Element_Textarea(
 	'JFooter_Left',
 	NULL,
-	'2024 主题采用 <a href="//github.com/jd82k/Joe" target="_blank" rel="noopener noreferrer">Joe再续前缘修改版</a>',
+	'2024 &copy; All rights reserved',
 	'自定义底部栏左侧内容（非必填）',
 	'介绍：用于修改全站底部左侧内容（wap端上方） <br>
 		 例如：<style style="display:inline">2021 - 2022 ©<a href="{站点链接}">{站点标题}</a>丨技术支持：<a href="http://blog.bri6.cn" target="_blank">易航</a></style>'
@@ -63,7 +63,7 @@ $JFooter_Right = new Typecho_Widget_Helper_Form_Element_Textarea(
 	NULL,
 	'<a href="'.Helper::options()->rootUrl.'/feed/" rel="noopener noreferrer">RSS</a>
 		 <a href="'.Helper::options()->rootUrl.'/sitemap.xml" rel="noopener noreferrer" style="margin-left: 15px">MAP</a>
-		 <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" style="margin-left: 15px">省ICP备xxxxxxxxxx号</a>',
+		 <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" style="margin-left: 15px">省ICP备X号-X</a>',
 	'自定义底部栏右侧内容（非必填）',
 	'介绍：用于修改全站底部右侧内容（wap端下方） <br>
 		 例如：&lt;a href="/"&gt;首页&lt;/a&gt; &lt;a href="/"&gt;关于&lt;/a&gt;'

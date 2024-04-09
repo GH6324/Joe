@@ -97,17 +97,18 @@ elseif (strpos($fontUrl, 'svg') !== false) $fontFormat = 'svg';
 			}
 		}';
 	}
-
-	?>@font-face {
+	?>
+	<?php if ($fontUrl!='') : ?>
+	@font-face {
 		font-family: 'Joe Font';
 		font-weight: 400;
 		font-style: normal;
 		font-display: swap;
-		src: url('<?php echo $fontUrl ?>');
-		<?php if ($fontFormat) : ?>src: url('<?php echo $fontUrl ?>') format('<?php echo $fontFormat ?>');
+		<?php if (isset($fontFormat)) : ?>src: url('<?php echo $fontUrl ?>') format('<?php echo $fontFormat ?>');
+		<?php else: ?>src: url('<?php echo $fontUrl ?>');
 		<?php endif; ?>
 	}
-
+	<?php endif; ?>
 	body {
 		<?php if ($fontUrl) : ?>font-family: 'Joe Font';
 		<?php else : ?>font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
@@ -118,8 +119,6 @@ elseif (strpos($fontUrl, 'svg') !== false) $fontFormat = 'svg';
 </style>
 <?php
 if ($this->options->JIndex_Link_Active == 'on') {
-	echo '<link rel="stylesheet" href="';
-	joe\theme_url('assets/css/options/JIndex_Link_Active.min.css');
-	echo '">';
+	echo '<link rel="stylesheet" href="'.joe\theme_url('assets/css/options/JIndex_Link_Active.min.css').'">';
 }
 ?>
