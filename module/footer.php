@@ -23,7 +23,7 @@ if ($this->options->JPendant_SSL == 'on') {
 	</style>
 	<div id="cc-myssl-seal">
 		<div title="TrustAsia 安全签章" id="myssl_seal" onclick="window.open('https://seal.trustasia.com/seal/detail?domain=<?= $_SERVER['HTTP_HOST'] ?>','TrustAsia 安全签章','height=800,width=470,top=0,right=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no')" style="text-align: center">
-			<img src="//static.myssl.com/res/images/myssl-id.png" alt="" style="width: 100%; height: 100%"></a>
+			<img src="<?= joe\theme_url('assets/images/ssl.png');?>" alt="" style="width: 100%; height: 100%"></a>
 		</div>
 	</div>
 <?php
