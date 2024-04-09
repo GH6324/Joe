@@ -1,3 +1,4 @@
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <article class="joe_detail__article">
 	<?php if (!$this->hidden && $this->fields->video) : ?>
 		<div class="joe_detail__article-video">

@@ -1,3 +1,4 @@
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <div class="joe_detail__agree">
     <div class="agree">
         <div class="icon">

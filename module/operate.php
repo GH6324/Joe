@@ -1,3 +1,4 @@
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <div class="joe_detail__operate">
     <div class="joe_detail__operate-tags">
         <?php $this->tags('', true, '<a href="javascript: void(0);">暂无标签</a>'); ?>

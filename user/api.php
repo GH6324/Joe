@@ -1,4 +1,5 @@
 <?php
+if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 session_start();
 $action = $_POST['action'];
 $mail = new PHPMailer();

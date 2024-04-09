@@ -1,5 +1,6 @@
 <?php
 
+if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 require_once 'tencent_protect.php';
 
 if (Helper::options()->JPrevent == 'on' && (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'QQ/') !== false)) {

@@ -1,3 +1,4 @@
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->related(4)->to($relatedPosts); ?>
 <?php if ($relatedPosts->have()) : ?>
     <div class="joe_detail__related">

@@ -1,5 +1,6 @@
 <?php
 
+if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 (function () {
 	/**
 	 * @Description：反腾讯网址安全检测系统

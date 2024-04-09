@@ -1,3 +1,4 @@
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('module/config.php');?>
 <meta charset="utf-8" />
 <meta name="renderer" content="webkit" />

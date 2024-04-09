@@ -2,6 +2,7 @@
 
 namespace joe;
 
+if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 /* 判断是否是手机 */
 
 function isMobile()

@@ -1,3 +1,4 @@
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php if ($this->options->JArticle_Bottom_Text) :?>
     <div class="joe_detail__copyright">
         <div class="content">
