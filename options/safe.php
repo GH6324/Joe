@@ -12,12 +12,12 @@ $JPrevent = new Typecho_Widget_Helper_Form_Element_Select(
 $JPrevent->setAttribute('class', 'joe_content joe_safe');
 $form->addInput($JPrevent->multiMode());
 
-$JTencentProtect = new Typecho_Widget_Helper_Form_Element_Select(
-	'JTencentProtect',
+$JProtect = new Typecho_Widget_Helper_Form_Element_Select(
+	'JProtect',
 	array('on' => '开启（默认）', 'off' => '关闭'),
 	'on',
 	'是否开启反蜘蛛爬虫非法扫描',
 	'介绍：开启后，可以一定程度上屏蔽各种自动扫描蜘蛛爬虫机器人非法扫描站点'
 );
-$JTencentProtect->setAttribute('class', 'joe_content joe_safe');
-$form->addInput($JTencentProtect->multiMode());
+$JProtect->setAttribute('class', 'joe_content joe_safe');
+$form->addInput($JProtect->multiMode());

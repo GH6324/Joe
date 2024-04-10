@@ -1,13 +1,8 @@
 <?php
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
-require_once 'tencent_protect.php';
-
-if (Helper::options()->JPrevent == 'on' && (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'QQ/') !== false)) {
-	// 我就不信这次腾讯会再给封了！！！
-	require JOE_ROOT . 'module/jump.php';
-	exit;
-}
+require_once 'protect.php';
+require_once 'prevent.php';
 
 /* 继承方法函数 */
 require_once ('widget.php');

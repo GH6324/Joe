@@ -2,7 +2,9 @@
 
 namespace joe;
 
-if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+if (!defined('__TYPECHO_ROOT_DIR__'))
+	exit;
+
 /* 判断是否是手机 */
 
 function isMobile()
@@ -103,16 +105,20 @@ function getAgentOS($agent)
 /* 获取全局懒加载图 */
 function getLazyload($type = true)
 {
-	if ($type) echo \Helper::options()->JLazyload;
-	else return \Helper::options()->JLazyload;
+	if ($type)
+		echo \Helper::options()->JLazyload;
+	else
+		return \Helper::options()->JLazyload;
 }
 
 /* 获取头像懒加载图 */
 function getAvatarLazyload($type = true)
 {
 	$str = \Helper::options()->themeUrl . '/assets/images/AvatarLazyload.png';
-	if ($type) echo $str;
-	else return $str;
+	if ($type)
+		echo $str;
+	else
+		return $str;
 }
 
 /* 查询文章浏览量 */
@@ -120,8 +126,10 @@ function getViews($item, $type = true)
 {
 	$db = \Typecho_Db::get();
 	$result = $db->fetchRow($db->select('views')->from('table.contents')->where('cid = ?', $item->cid))['views'];
-	if ($type) echo number_format($result);
-	else return number_format($result);
+	if ($type)
+		echo number_format($result);
+	else
+		return number_format($result);
 }
 
 /* 查询文章点赞量 */
@@ -129,8 +137,10 @@ function getAgree($item, $type = true)
 {
 	$db = \Typecho_Db::get();
 	$result = $db->fetchRow($db->select('agree')->from('table.contents')->where('cid = ?', $item->cid))['agree'];
-	if ($type) echo number_format($result);
-	else return number_format($result);
+	if ($type)
+		echo number_format($result);
+	else
+		return number_format($result);
 }
 
 /* 通过邮箱生成头像地址 */
@@ -150,7 +160,8 @@ function getAvatarByMail($mail)
 	} else {
 		echo $gravatarsUrl . $md5MailLower . '?d=mm';
 	}
-};
+}
+;
 
 /* 获取侧边栏随机一言 */
 function getAsideAuthorMotto()
@@ -180,8 +191,10 @@ function getAbstract($item, $type = true)
 	} else {
 		$abstract = markdown_filter($abstract);
 	}
-	if ($type) echo $abstract;
-	else return $abstract;
+	if ($type)
+		echo $abstract;
+	else
+		return $abstract;
 }
 
 /* 获取列表缩略图 */
@@ -194,17 +207,21 @@ function getThumbnails($item)
 	/* 如果填写了自定义缩略图，则优先显示填写的缩略图 */
 	if ($item->fields->thumb) {
 		$fields_thumb_arr = explode("\r\n", $item->fields->thumb);
-		foreach ($fields_thumb_arr as $list) $result[] = $list;
+		foreach ($fields_thumb_arr as $list)
+			$result[] = $list;
 	}
 	/* 如果匹配到正则，则继续补充匹配到的图片 */
 	if (preg_match_all($pattern, $item->content, $thumbUrl)) {
-		foreach ($thumbUrl[1] as $list) $result[] = $list;
+		foreach ($thumbUrl[1] as $list)
+			$result[] = $list;
 	}
 	if (preg_match_all($patternMD, $item->content, $thumbUrl)) {
-		foreach ($thumbUrl[1] as $list) $result[] = $list;
+		foreach ($thumbUrl[1] as $list)
+			$result[] = $list;
 	}
 	if (preg_match_all($patternMDfoot, $item->content, $thumbUrl)) {
-		foreach ($thumbUrl[1] as $list) $result[] = $list;
+		foreach ($thumbUrl[1] as $list)
+			$result[] = $list;
 	}
 	/* 如果上面的数量不足3个，则直接补充3个随即图进去 */
 	if (sizeof($result) < 3) {
@@ -230,7 +247,8 @@ function getParentReply($parent)
 	if ($parent !== "0") {
 		$db = \Typecho_Db::get();
 		$commentInfo = $db->fetchRow($db->select('author')->from('table.comments')->where('coid = ?', $parent));
-		if (empty($commentInfo['author'])) return;
+		if (empty($commentInfo['author']))
+			return;
 		echo '<div class="parent"><span style="vertical-align: 1px;">@</span> ' . $commentInfo['author'] . '</div>';
 	}
 }
