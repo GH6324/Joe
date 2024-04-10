@@ -53,10 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
     $.ajax({
         url: "https://raw.githubusercontent.com/jd82k/Joe/master/NOTICE",
         type: "get",
+        dataType: "html",
         success: function(data){
-            notice.innerHTML = data.response;
+            notice.innerHTML = data;
         },
-        error: function(data){
+        error: function(){
             notice.innerHTML = "请求失败！";
         }
     });
