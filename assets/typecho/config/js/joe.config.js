@@ -50,22 +50,16 @@ document.addEventListener("DOMContentLoaded", function () {
         notice.style.display = "block";
         form.style.display = "none";
     }
-    let xhr = new XMLHttpRequest;
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
-            // let data = JSON.parse(xhr.responseText);
-            // if(data.success){
-            //     notice.innerHTML = '<p class="title">最新版本：' + data.title + "</p>" + data.content;
-            // }else{
-            //     notice.innerHTML = "请求失败！";
-            // }
+    $.ajax({
+        url: "https://raw.githubusercontent.com/jd82k/Joe/master/NOTICE",
+        type: "get",
+        success: function(data){
             notice.innerHTML = xhr.responseText;
-        } else{
+        },
+        error: function(data){
             notice.innerHTML = "请求失败！";
         }
-    }
-    xhr.open("get", "https://raw.githubusercontent.com/jd82k/Joe/master/NOTICE", true);
-    xhr.send();
+    });
     //模拟form表单提交打开新的页面
     // function open_page(url, param = {}) {
     //     var form = '<form action="' + url + '"  target="_blank"  id="windowOpen" style="display:none">';
