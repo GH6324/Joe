@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         url: "https://raw.githubusercontent.com/jd82k/Joe/master/NOTICE",
         type: "get",
         success: function(data){
-            notice.innerHTML = xhr.responseText;
+            notice.innerHTML = data.response;
         },
         error: function(data){
             notice.innerHTML = "请求失败！";
