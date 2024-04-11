@@ -26,6 +26,8 @@ class ComposerStaticInit72d12ca78f20e8125a02612c2639f4e8
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Ip2Region' => __DIR__ . '/..' . '/zoujingli/ip2region/Ip2Region.php',
+        'XdbSearcher' => __DIR__ . '/..' . '/zoujingli/ip2region/XdbSearcher.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

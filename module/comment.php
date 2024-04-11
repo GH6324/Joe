@@ -130,7 +130,11 @@ function threadedComments($comments, $options)
 						<?php if ($comments->status === "waiting") : ?>
 							<em class="waiting">（评论审核中...）</em>
 						<?php endif; ?>
-						<div class="agent"><?php joe\getAgentOS($comments->agent); ?> · <?php joe\getAgentBrowser($comments->agent); ?></div>
+						<div class="agent">
+							<?php if (Helper::options()->Jcomment_showPlatform == 'on'): joe\getAgentOS($comments->agent); endif; ?> · 
+							<?php if (Helper::options()->Jcomment_showBrowser == 'on'): joe\getAgentBrowser($comments->agent); endif; ?> . 
+							<?php if (Helper::options()->Jcomment_showGeoIp == 'on'): joe\getGeoIp($comments->ip); endif; ?>
+						</div>
 					</div>
 					<div class="substance">
 						<?php joe\getParentReply($comments->parent) ?>

@@ -1,5 +1,6 @@
 {
     "require": {
-        "network/http": "dev-master"
+        "network/http": "dev-master",
+        "zoujingli/ip2region": "^2.0"
     }
 }

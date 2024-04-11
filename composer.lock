@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c866a1ab785036a136c34b54af0ba5a9",
+    "content-hash": "fe7b51b9c7d6653311968e241e2e0ef1",
     "packages": [
         {
             "name": "network/http",
@@ -49,6 +49,52 @@
                 "source": "https://github.com/xh8039/php-net-request/tree/master"
             },
             "time": "2023-08-02T15:29:20+00:00"
+        },
+        {
+            "name": "zoujingli/ip2region",
+            "version": "v2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zoujingli/ip2region.git",
+                "reference": "95d9064c057b978f8985b67389693ecd31f48c7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zoujingli/ip2region/zipball/95d9064c057b978f8985b67389693ecd31f48c7f",
+                "reference": "95d9064c057b978f8985b67389693ecd31f48c7f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "Ip2Region.php",
+                    "XdbSearcher.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Anyon",
+                    "email": "zoujingli@qq.com",
+                    "homepage": "https://thinkadmin.top"
+                }
+            ],
+            "description": "Ip2Region for PHP",
+            "homepage": "https://github.com/zoujingli/Ip2Region",
+            "keywords": [
+                "Ip2Region"
+            ],
+            "support": {
+                "issues": "https://github.com/zoujingli/ip2region/issues",
+                "source": "https://github.com/zoujingli/ip2region/tree/v2.0.5"
+            },
+            "time": "2024-03-21T12:09:30+00:00"
         }
     ],
     "packages-dev": [],
@@ -61,5 +107,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

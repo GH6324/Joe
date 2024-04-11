@@ -44,9 +44,9 @@ elseif (strpos($fontUrl, 'svg') !== false) $fontFormat = 'svg';
 ?>
 <style>
 	<?php
-
-	// 移动端情况下
+	
 	if (joe\isMobile()) {
+		// 移动端情况下
 		// 移动端屏蔽热门文章滚动条
 		if ($this->is('index')) {
 			echo '.joe_index__hot-list .item>.item-body>.item-tags-category::-webkit-scrollbar {display: none;}';
@@ -59,10 +59,8 @@ elseif (strpos($fontUrl, 'svg') !== false) $fontFormat = 'svg';
 		if ($this->options->JWallpaper_Background_WAP) {
 			echo 'html body::before {background: url(' . $this->options->JWallpaper_Background_WAP . ')}';
 		}
-	}
-
-	// 非移动端情况下
-	if (joe\isMobile()) {
+	} else {
+		// 非移动端情况下
 		// 首页热门文章滚动条内部下边距
 		if ($this->is('index')) {
 			echo '.joe_index__hot-list .item>.item-body>.item-tags-category {padding-bottom: 3px;}';

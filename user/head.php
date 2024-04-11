@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="<?= joe\theme_url('assets/libs/animate/animate.min.css'); ?>" />
 <link rel="stylesheet" href="<?= joe\theme_url('assets/libs/fontawesome/css/fontawesome.min.css'); ?>">
 <link rel="stylesheet" href="<?= joe\theme_url('assets/libs/fontawesome/css/solid.min.css'); ?>">
+<link rel="stylesheet" href="<?= joe\theme_url('assets/libs/fontawesome/css/brands.min.css'); ?>">
 <link rel="stylesheet" href="<?= joe\theme_url('assets/libs/APlayer/APlayer.min.css'); ?>">
 <style>
     button,

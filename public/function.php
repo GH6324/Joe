@@ -31,15 +31,15 @@ function isMobile()
 function getAgentBrowser($agent)
 {
 	if (preg_match('/MSIE\s([^\s|;]+)/i', $agent, $regs)) {
-		$outputer = 'Internet Explore';
+		$outputer = '<i class="icon fa-brands fa-internet-explorer"></i>Internet Explore';
 	} else if (preg_match('/FireFox\/([^\s]+)/i', $agent, $regs)) {
-		$outputer = 'FireFox';
+		$outputer = '<i class="icon fa-brands fa-firefox"></i>FireFox';
 	} else if (preg_match('/Maxthon([\d]*)\/([^\s]+)/i', $agent, $regs)) {
-		$outputer = 'MicroSoft Edge';
+		$outputer = '<i class="icon fa-brands fa-edge"></i>Edge';
 	} else if (preg_match('#360([a-zA-Z0-9.]+)#i', $agent, $regs)) {
 		$outputer = '360 Fast Browser';
 	} else if (preg_match('/Edge([\d]*)\/([^\s]+)/i', $agent, $regs)) {
-		$outputer = 'MicroSoft Edge';
+		$outputer = '<i class="icon fa-brands fa-edge"></i>Edge';
 	} else if (preg_match('/UC/i', $agent)) {
 		$outputer = 'UC Browser';
 	} else if (preg_match('/QQ/i', $agent, $regs) || preg_match('/QQ Browser\/([^\s]+)/i', $agent, $regs)) {
@@ -47,13 +47,13 @@ function getAgentBrowser($agent)
 	} else if (preg_match('/UBrowser/i', $agent, $regs)) {
 		$outputer = 'UC Browser';
 	} else if (preg_match('/Opera[\s|\/]([^\s]+)/i', $agent, $regs)) {
-		$outputer = 'Opera';
+		$outputer = '<i class="icon fa-brands fa-opera"></i>Opera';
 	} else if (preg_match('/Chrome([\d]*)\/([^\s]+)/i', $agent, $regs)) {
-		$outputer = 'Google Chrome';
+		$outputer = '<i class="icon fa-brands fa-chrome"></i>Chrome';
 	} else if (preg_match('/safari\/([^\s]+)/i', $agent, $regs)) {
-		$outputer = 'Safari';
+		$outputer = '<i class="icon fa-brands fa-safari"></i>Safari';
 	} else {
-		$outputer = 'Google Chrome';
+		$outputer = '<i class="icon fa-brands fa-chrome"></i>Chrome';
 	}
 	echo $outputer;
 }
@@ -61,45 +61,64 @@ function getAgentBrowser($agent)
 /* 根据评论agent获取设备类型 */
 function getAgentOS($agent)
 {
-	$os = "Linux";
+	$os = '<i class="icon fa-brands fa-linux"></i>Linux';
 	if (preg_match('/win/i', $agent)) {
 		if (preg_match('/nt 6.0/i', $agent)) {
-			$os = 'Windows Vista';
+			$os = '<i class="icon fa-brands fa-windows"></i>Windows Vista';
 		} else if (preg_match('/nt 6.1/i', $agent)) {
-			$os = 'Windows 7';
+			$os = '<i class="icon fa-brands fa-windows"></i>Windows 7';
 		} else if (preg_match('/nt 6.2/i', $agent)) {
-			$os = 'Windows 8';
+			$os = '<i class="icon fa-brands fa-windows"></i>Windows 8';
 		} else if (preg_match('/nt 6.3/i', $agent)) {
-			$os = 'Windows 8.1';
+			$os = '<i class="icon fa-brands fa-windows"></i>Windows 8.1';
 		} else if (preg_match('/nt 5.1/i', $agent)) {
-			$os = 'Windows XP';
+			$os = '<i class="icon fa-brands fa-windows"></i>Windows XP';
 		} else if (preg_match('/nt 10.0/i', $agent)) {
-			$os = 'Windows 10';
+			$os = '<i class="icon fa-brands fa-windows"></i>Windows 10 or 11';
 		} else {
-			$os = 'Windows X64';
+			$os = '<i class="icon fa-brands fa-windows"></i>Windows x64';
 		}
 	} else if (preg_match('/android/i', $agent)) {
-		if (preg_match('/android 9/i', $agent)) {
-			$os = 'Android Pie';
-		} else if (preg_match('/android 8/i', $agent)) {
-			$os = 'Android Oreo';
-		} else {
-			$os = 'Android';
-		}
+		$os = '<i class="icon fa-brands fa-android"></i>Android';
 	} else if (preg_match('/ubuntu/i', $agent)) {
-		$os = 'Ubuntu';
+		$os = '<i class="icon fa-brands fa-ubuntu"></i>Ubuntu';
 	} else if (preg_match('/linux/i', $agent)) {
-		$os = 'Linux';
+		$os = '<i class="icon fa-brands fa-linux"></i>Linux';
 	} else if (preg_match('/iPhone/i', $agent)) {
-		$os = 'iPhone';
+		$os = '<i class="icon fa-brands fa-apple"></i>iPhone';
 	} else if (preg_match('/mac/i', $agent)) {
-		$os = 'MacOS';
+		$os = '<i class="icon fa-brands fa-apple"></i>MacOS';
 	} else if (preg_match('/fusion/i', $agent)) {
-		$os = 'Android';
+		$os = '<i class="icon fa-brands fa-android"></i>Android';
 	} else {
-		$os = 'Linux';
+		$os = '<i class="icon fa-brands fa-linux"></i>Linux';
 	}
 	echo $os;
+}
+
+/* 根据评论ip获取归属地 */
+function getGeoIp($ip){
+	$ip2region = new \Ip2Region();
+	try {
+        $s = $ip2region->memorySearch($ip);
+    } catch (\Exception $e) {
+        echo '<i class="icon fa-solid fa-location-dot"></i>未知';
+		return;
+    }
+    if (strpos($s['region'], '内网IP') !== false) {
+        echo '<i class="icon fa-solid fa-location-dot"></i>内网IP';
+		return;
+    }
+    $region = explode('|', $s['region']);
+    $res = '';
+    foreach ($region as $item) {
+        if (str_starts_with($item, '0')) {
+            continue;
+        }
+        $res .= $item;
+    }
+    echo '<i class="icon fa-solid fa-location-dot"></i>'.$res;
+	return;
 }
 
 /* 获取全局懒加载图 */

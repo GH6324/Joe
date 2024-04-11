@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '9f2e78f045febc34aa9077bb9e1057e0a42c921d',
+        'reference' => 'cf2909244091c344e8ae54e3f5a552a921e25605',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '9f2e78f045febc34aa9077bb9e1057e0a42c921d',
+            'reference' => 'cf2909244091c344e8ae54e3f5a552a921e25605',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -28,6 +28,15 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
+            'dev_requirement' => false,
+        ),
+        'zoujingli/ip2region' => array(
+            'pretty_version' => 'v2.0.5',
+            'version' => '2.0.5.0',
+            'reference' => '95d9064c057b978f8985b67389693ecd31f48c7f',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../zoujingli/ip2region',
+            'aliases' => array(),
             'dev_requirement' => false,
         ),
     ),
