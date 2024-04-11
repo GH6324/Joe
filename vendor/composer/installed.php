@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'cf2909244091c344e8ae54e3f5a552a921e25605',
+        'reference' => '7ac3db1e54e7cb62adf56efc27090565861c0815',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'cf2909244091c344e8ae54e3f5a552a921e25605',
+            'reference' => '7ac3db1e54e7cb62adf56efc27090565861c0815',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -22,12 +22,21 @@
         'network/http' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '86a583e584e2d48b3286836ae46bb8a70d63aeef',
+            'reference' => '068d37a97793c09efadfbe9564f361540580cd2e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../network/http',
             'aliases' => array(
                 0 => '9999999-dev',
             ),
+            'dev_requirement' => false,
+        ),
+        'phpmailer/phpmailer' => array(
+            'pretty_version' => 'v6.9.1',
+            'version' => '6.9.1.0',
+            'reference' => '039de174cd9c17a8389754d3b877a2ed22743e18',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpmailer/phpmailer',
+            'aliases' => array(),
             'dev_requirement' => false,
         ),
         'zoujingli/ip2region' => array(

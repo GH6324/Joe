@@ -419,7 +419,7 @@ function send_email($title, $subtitle, $content, $email = '')
 	$mail = new \PHPMailer();
 	$mail->isSMTP();
 	$mail->SMTPAuth = true;
-	$mail->CharSet = 'UTF-8';
+	$mail->CharSet = \PHPMailer::CHARSET_UTF8;
 	$mail->SMTPSecure = \Helper::options()->JCommentSMTPSecure;
 	$mail->Host = \Helper::options()->JCommentMailHost;
 	$mail->Port = \Helper::options()->JCommentMailPort;

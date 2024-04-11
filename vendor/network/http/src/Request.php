@@ -4,7 +4,7 @@ namespace network\http;
 
 /**
  * HTTP请求库
- * 
+ *
  * @package network\http
  * @author  易航
  * @version dev
@@ -33,8 +33,8 @@ trait Request
 
 	/**
 	 * 构造函数,初始化请求配置
-	 * 
-	 * @param array $options 要设置的配置项  
+	 *
+	 * @param array $options 要设置的配置项
 	 */
 	public function __construct(array $options = [])
 	{
@@ -156,9 +156,9 @@ trait Request
 
 	/**
 	 * 设置请求头
-	 * 
+	 *
 	 * @param string|array $name  请求头名称或数组
-	 * @param string $value 请求头值  
+	 * @param string $value 请求头值
 	 * @return $this
 	 */
 	public function header($name, $value = null)
@@ -174,9 +174,9 @@ trait Request
 
 	/**
 	 * 设置请求参数
-	 * 
-	 * @param string|array $name  参数名称或数组 
-	 * @param string $value 参数值  
+	 *
+	 * @param string|array $name  参数名称或数组
+	 * @param string $value 参数值
 	 * @return $this
 	 */
 	public function param($name, $value = null)
@@ -191,8 +191,8 @@ trait Request
 
 	/**
 	 * 设置请求Cookie
-	 * 
-	 * @param string $value Cookie值  
+	 *
+	 * @param string $value Cookie值
 	 * @return $this
 	 */
 	public function cookie(string $value)
@@ -220,7 +220,7 @@ trait Request
 
 	/**
 	 * 发送请求 支持混合传参
-	 * 
+	 *
 	 * @param $param1 请求方法|请求URL|请求参数
 	 * @param $param2 请求方法|请求URL|请求参数
 	 * @param $param3 请求方法|请求URL|请求参数
