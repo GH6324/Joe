@@ -17,16 +17,16 @@
 	(function () {
 	    function loadEnd() {
 			setTimeout(() => {
-				$("#loading-animation").fadeOut(540)
-			}, 500)
+				$("#loading-animation").fadeOut(540);
+			}, 500);
 		}
 		if (window.jQuery) {
 			$(document).ready(() => {
-				loadEnd()
-			})
+				loadEnd();
+			});
 		} else {
 			document.onreadystatechange = () => {
-			    document.readyState == 'interactive' && loadEnd()
+			    document.readyState == 'interactive' && loadEnd();
 			}
 		}
 	}())

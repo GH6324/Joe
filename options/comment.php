@@ -63,8 +63,8 @@ $Jcomment_showGeoIp = new Typecho_Widget_Helper_Form_Element_Select(
 		'off' => '关闭',
 	),
 	'on',
-	'是否展示评论者IP归属地',
-	'介绍：开启后，会显示评论者IP归属地信息'
+	'是否展示评论者IPv4归属地',
+	'介绍：开启后，会显示评论者IPv4归属地信息，如果评论者使用IPv6来访，会显示未知'
 );
 $Jcomment_showGeoIp->setAttribute('class', 'joe_content joe_comment');
 $form->addInput($Jcomment_showGeoIp->multiMode());

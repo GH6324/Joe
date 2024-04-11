@@ -97,7 +97,7 @@ function getAgentOS($agent)
 	echo $os;
 }
 
-/* 根据评论ip获取归属地 */
+/* 根据评论者IP获取归属地（只支持IPv4，IPv6显示为未知） */
 function getGeoIp($ip){
 	$ip2region = new \Ip2Region();
 	try {
