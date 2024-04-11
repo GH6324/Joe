@@ -6,7 +6,11 @@ if (!defined('__TYPECHO_ROOT_DIR__'))
 	exit;
 
 /* 判断是否是手机 */
-
+if(!function_exists('str_starts_with')){
+	function str_starts_with($str,$pattern) {
+		return (strpos($str,$pattern) === 0) ? true:false;
+	}
+}
 function isMobile()
 {
 	if (isset($_SERVER['HTTP_X_WAP_PROFILE']))
