@@ -1,7 +1,5 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 

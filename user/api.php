@@ -1,4 +1,6 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 session_start();
 $action = $_POST['action'];

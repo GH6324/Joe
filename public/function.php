@@ -2,6 +2,8 @@
 
 namespace joe;
 
+use PHPMailer\PHPMailer\PHPMailer;
+
 if (!defined('__TYPECHO_ROOT_DIR__'))
 	exit;
 
@@ -411,10 +413,10 @@ function send_email($title, $subtitle, $content, $email = '')
 			$email = $authoInfo['mail'];
 		}
 	}
-	$mail = new \PHPMailer();
+	$mail = new PHPMailer();
 	$mail->isSMTP();
 	$mail->SMTPAuth = true;
-	$mail->CharSet = \PHPMailer::CHARSET_UTF8;
+	$mail->CharSet = PHPMailer::CHARSET_UTF8;
 	$mail->SMTPSecure = \Helper::options()->JCommentSMTPSecure;
 	$mail->Host = \Helper::options()->JCommentMailHost;
 	$mail->Port = \Helper::options()->JCommentMailPort;
