@@ -115,10 +115,7 @@ $form->addInput($JAside_Author_Nav->multiMode());
 
 $JAside_Timelife_Status = new Typecho_Widget_Helper_Form_Element_Select(
 	'JAside_Timelife_Status',
-	array(
-		'off' => '关闭（默认）',
-		'on' => '开启'
-	),
+	array('on' => '开启', 'off' => '关闭（默认）'),
 	'off',
 	'是否开启人生倒计时模块 - PC',
 	NULL
@@ -148,10 +145,7 @@ $form->addInput($JAside_Hot_Num->multiMode());
 
 $JAside_Newreply_Status = new Typecho_Widget_Helper_Form_Element_Select(
 	'JAside_Newreply_Status',
-	array(
-		'off' => '关闭（默认）',
-		'on' => '开启'
-	),
+	array('on' => '开启', 'off' => '关闭（默认）',),
 	'off',
 	'是否开启最新回复栏 - PC',
 	'介绍：用于控制是否开启最新回复栏 <br>
@@ -203,10 +197,7 @@ $form->addInput($JADContent);
 
 $JAside_3DTag = new Typecho_Widget_Helper_Form_Element_Select(
 	'JAside_3DTag',
-	array(
-		'off' => '关闭（默认）',
-		'on' => '开启'
-	),
+	array('on' => '开启', 'off' => '关闭（默认）'),
 	'off',
 	'是否开启3D云标签 - PC',
 	NULL
@@ -216,10 +207,7 @@ $form->addInput($JAside_3DTag->multiMode());
 
 $JAside_Flatterer = new Typecho_Widget_Helper_Form_Element_Select(
 	'JAside_Flatterer',
-	array(
-		'off' => '关闭（默认）',
-		'on' => '开启'
-	),
+	array('on' => '开启', 'off' => '关闭（默认）'),
 	'off',
 	'是否开启舔狗日记 - PC',
 	NULL
@@ -229,10 +217,7 @@ $form->addInput($JAside_Flatterer->multiMode());
 
 $JAside_History_Today = new Typecho_Widget_Helper_Form_Element_Select(
 	'JAside_History_Today',
-	array(
-		'off' => '关闭（默认）',
-		'on' => '开启'
-	),
+	array('on' => '开启', 'off' => '关闭（默认）'),
 	'off',
 	'是否开启那年今日 - PC',
 	'介绍：用于设置侧边栏是否显示往年今日的文章 <br />

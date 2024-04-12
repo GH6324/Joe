@@ -2,19 +2,6 @@
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
-/* 评论发信 */
-$JCommentMail = new Typecho_Widget_Helper_Form_Element_Select(
-	'JCommentMail',
-	array('off' => '关闭（默认）', 'on' => '开启'),
-	'off',
-	'是否开启评论邮件通知',
-	'介绍：开启后评论内容将会进行邮箱通知 <br />
-		 注意：此项需要您完整无错的填写下方的邮箱设置！！ <br />
-		 其他：下方例子以QQ邮箱为例，推荐使用QQ邮箱'
-);
-$JCommentMail->setAttribute('class', 'joe_content joe_message');
-$form->addInput($JCommentMail->multiMode());
-
 $JCommentMailHost = new Typecho_Widget_Helper_Form_Element_Text(
 	'JCommentMailHost',
 	NULL,
@@ -22,7 +9,7 @@ $JCommentMailHost = new Typecho_Widget_Helper_Form_Element_Text(
 	'邮箱服务器地址',
 	'例如：smtp.qq.com'
 );
-$JCommentMailHost->setAttribute('class', 'joe_content joe_message');
+$JCommentMailHost->setAttribute('class', 'joe_content joe_mail');
 $form->addInput($JCommentMailHost->multiMode());
 
 $JCommentSMTPSecure = new Typecho_Widget_Helper_Form_Element_Select(
@@ -32,7 +19,7 @@ $JCommentSMTPSecure = new Typecho_Widget_Helper_Form_Element_Select(
 	'加密方式',
 	'介绍：用于选择登录鉴权加密方式'
 );
-$JCommentSMTPSecure->setAttribute('class', 'joe_content joe_message');
+$JCommentSMTPSecure->setAttribute('class', 'joe_content joe_mail');
 $form->addInput($JCommentSMTPSecure->multiMode());
 
 $JCommentMailPort = new Typecho_Widget_Helper_Form_Element_Text(
@@ -42,7 +29,7 @@ $JCommentMailPort = new Typecho_Widget_Helper_Form_Element_Text(
 	'邮箱服务器端口号',
 	'例如：465'
 );
-$JCommentMailPort->setAttribute('class', 'joe_content joe_message');
+$JCommentMailPort->setAttribute('class', 'joe_content joe_mail');
 $form->addInput($JCommentMailPort->multiMode());
 
 $JCommentMailFromName = new Typecho_Widget_Helper_Form_Element_Text(
@@ -52,7 +39,7 @@ $JCommentMailFromName = new Typecho_Widget_Helper_Form_Element_Text(
 	'发件人昵称',
 	'例如：帅气的象拔蚌'
 );
-$JCommentMailFromName->setAttribute('class', 'joe_content joe_message');
+$JCommentMailFromName->setAttribute('class', 'joe_content joe_mail');
 $form->addInput($JCommentMailFromName->multiMode());
 
 $JCommentMailAccount = new Typecho_Widget_Helper_Form_Element_Text(
@@ -62,7 +49,7 @@ $JCommentMailAccount = new Typecho_Widget_Helper_Form_Element_Text(
 	'发件人邮箱',
 	'例如：123456@qq.com'
 );
-$JCommentMailAccount->setAttribute('class', 'joe_content joe_message');
+$JCommentMailAccount->setAttribute('class', 'joe_content joe_mail');
 $form->addInput($JCommentMailAccount->multiMode());
 
 $JCommentMailPassword = new Typecho_Widget_Helper_Form_Element_Text(
@@ -75,5 +62,5 @@ $JCommentMailPassword = new Typecho_Widget_Helper_Form_Element_Text(
 		 QQ邮箱 > 设置 > 账户 > IMAP/SMTP服务 > 开启 <br>
 		 其他：这个可以百度一下开启教程，有图文教程'
 );
-$JCommentMailPassword->setAttribute('class', 'joe_content joe_message');
+$JCommentMailPassword->setAttribute('class', 'joe_content joe_mail');
 $form->addInput($JCommentMailPassword->multiMode());

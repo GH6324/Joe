@@ -4,10 +4,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 $JIndex_Article_Double_Column = new Typecho_Widget_Helper_Form_Element_Select(
 	'JIndex_Article_Double_Column',
-	array(
-		'off' => '关闭（默认）',
-		'on' => '开启'
-	),
+	array('on' => '开启', 'off' => '关闭（默认）'),
 	'off',
 	'首页文章双栏排版并隐藏侧边栏（仅在屏幕分辨率大于1400px下生效）',
 	NULL

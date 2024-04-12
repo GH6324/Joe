@@ -16,7 +16,7 @@ $form->addInput($JUser_Switch->multiMode());
 
 $JUser_Forget = new Typecho_Widget_Helper_Form_Element_Select(
 	'JUser_Forget',
-	array('off' => '关闭（默认）', 'on' => '开启'),
+	array('on' => '开启', 'off' => '关闭（默认）'),
 	'off',
 	'找回密码',
 	'介绍：未配置邮箱无法发送验证码 访问地址：<a target="_blank" href="' . Typecho_Common::url('user/forget', Helper::options()->index) . '">' . Typecho_Common::url('user/forget', Helper::options()->index) . '</a>'

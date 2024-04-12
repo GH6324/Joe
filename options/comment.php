@@ -4,10 +4,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 $JCommentStatus = new Typecho_Widget_Helper_Form_Element_Select(
 	'JCommentStatus',
-	array(
-		'on' => '开启（默认）',
-		'off' => '关闭'
-	),
+	array('on' => '开启（默认）', 'off' => '关闭'),
 	'on',
 	'开启或关闭全站评论',
 	'介绍：用于一键开启关闭所有页面的评论 <br>
@@ -17,12 +14,21 @@ $JCommentStatus = new Typecho_Widget_Helper_Form_Element_Select(
 $JCommentStatus->setAttribute('class', 'joe_content joe_comment');
 $form->addInput($JCommentStatus->multiMode());
 
+/* 评论发信 */
+$JCommentMail = new Typecho_Widget_Helper_Form_Element_Select(
+	'JCommentMail',
+	array('on' => '开启', 'off' => '关闭（默认）'),
+	'off',
+	'是否开启评论邮件通知',
+	'介绍：开启后评论内容将会进行邮箱通知 <br />
+		 注意：此项需要您完整无错的填写邮箱设置！'
+);
+$JCommentMail->setAttribute('class', 'joe_content joe_comment');
+$form->addInput($JCommentMail->multiMode());
+
 $Jcomment_draw = new Typecho_Widget_Helper_Form_Element_Select(
 	'Jcomment_draw',
-	array(
-		'on' => '开启',
-		'off' => '关闭（默认）',
-	),
+	array('on' => '开启', 'off' => '关闭（默认）'),
 	'off',
 	'是否启用评论画图模式',
 	'介绍：开启后，可以进行画图评论'
@@ -32,10 +38,7 @@ $form->addInput($Jcomment_draw->multiMode());
 
 $Jcomment_showPlatform = new Typecho_Widget_Helper_Form_Element_Select(
 	'Jcomment_showPlatform',
-	array(
-		'on' => '开启（默认）',
-		'off' => '关闭',
-	),
+	array('on' => '开启（默认）', 'off' => '关闭'),
 	'on',
 	'是否展示评论者设备平台',
 	'介绍：开启后，会显示评论者设备平台信息'
@@ -45,10 +48,7 @@ $form->addInput($Jcomment_showPlatform->multiMode());
 
 $Jcomment_showBrowser = new Typecho_Widget_Helper_Form_Element_Select(
 	'Jcomment_showBrowser',
-	array(
-		'on' => '开启（默认）',
-		'off' => '关闭',
-	),
+	array('on' => '开启（默认）', 'off' => '关闭'),
 	'on',
 	'是否展示评论者浏览器',
 	'介绍：开启后，会显示评论者浏览器信息'
@@ -58,10 +58,7 @@ $form->addInput($Jcomment_showBrowser->multiMode());
 
 $Jcomment_showGeoIp = new Typecho_Widget_Helper_Form_Element_Select(
 	'Jcomment_showGeoIp',
-	array(
-		'on' => '开启（默认）',
-		'off' => '关闭',
-	),
+	array('on' => '开启（默认）', 'off' => '关闭'),
 	'on',
 	'是否展示评论者IPv4归属地',
 	'介绍：开启后，会显示评论者IPv4归属地信息，如果评论者使用IPv6来访，会显示未知<br>
@@ -84,7 +81,7 @@ $form->addInput($JSensitiveWords);
 
 $JLimitOneChinese = new Typecho_Widget_Helper_Form_Element_Select(
 	'JLimitOneChinese',
-	array('off' => '关闭（默认）', 'on' => '开启'),
+	array('on' => '开启', 'off' => '关闭（默认）'),
 	'off',
 	'是否开启评论至少包含一个中文',
 	'介绍：开启后如果评论内容未包含一个中文，则将会把评论置为审核状态 <br />

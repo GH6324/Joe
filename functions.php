@@ -54,7 +54,7 @@ function themeConfig($form)
 					<li class="item" data-current="joe_friend">友链设置</li>
 					<li class="item" data-current="joe_comment">评论设置</li>
 					<li class="item" data-current="joe_statistic">统计设置</li>
-					<li class="item" data-current="joe_message">消息推送</li>
+					<li class="item" data-current="joe_mail">邮箱配置</li>
 					<li class="item" data-current="joe_code">插入代码</li>
 					<li class="item" data-current="joe_other">其他设置</li>
 				</ul>
@@ -100,8 +100,8 @@ function themeConfig($form)
 	// 统计设置
 	require_once('options/statistic.php');
 
-	// 消息推送
-	require_once('options/message.php');
+	// 邮箱配置
+	require_once('options/mail.php');
 
 	// 自定义代码
 	require_once('options/code.php');

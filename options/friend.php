@@ -17,7 +17,7 @@ $form->addInput($JFriends);
 
 $JFriends_Submit = new Typecho_Widget_Helper_Form_Element_Select(
 	'JFriends_Submit',
-	array('off' => '关闭（默认）', 'on' => '开启'),
+	array('on' => '开启', 'off' => '关闭（默认）'),
 	'off',
 	'是否开启友情链接在线申请',
 	'注意：需正确配置邮箱 否则收不到申请'
@@ -27,7 +27,7 @@ $form->addInput($JFriends_Submit->multiMode());
 
 $JFriends_shuffle = new Typecho_Widget_Helper_Form_Element_Select(
 	'JFriends_shuffle',
-	array('off' => '关闭（默认）', 'on' => '开启'),
+	array('on' => '开启', 'off' => '关闭（默认）'),
 	'off',
 	'是否开启友情链接随机排序',
 	NULL

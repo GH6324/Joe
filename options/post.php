@@ -4,10 +4,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 $JPost_Header_Img_Switch = new Typecho_Widget_Helper_Form_Element_Select(
 	'JPost_Header_Img_Switch',
-	array(
-		'on' => '开启（默认）',
-		'off' => '关闭',
-	),
+	array('on' => '开启（默认）', 'off' => '关闭'),
 	'on',
 	'是否开启文章页面顶部大图',
 	'介绍：开启后顶部大图背景将使用文章缩略图 文字将使用文字标题 如果没有文章没有缩略图那么使用首页顶部大图和侧边栏随机一言充当文字'
@@ -93,10 +90,7 @@ $form->addInput($Jsearch_target->multiMode());
 
 $JArticle_Guide = new Typecho_Widget_Helper_Form_Element_Select(
 	'JArticle_Guide',
-	array(
-		'on' => '开启（默认）',
-		'off' => '关闭',
-	),
+	array('on' => '开启（默认）', 'off' => '关闭'),
 	'on',
 	'是否开启文章导读目录模块',
 	NULL
@@ -126,10 +120,7 @@ $form->addInput($JOverdue->multiMode());
 
 $JEditor = new Typecho_Widget_Helper_Form_Element_Select(
 	'JEditor',
-	array(
-		'on' => '开启（默认）',
-		'off' => '关闭',
-	),
+	array('on' => '开启（默认）', 'off' => '关闭'),
 	'on',
 	'是否启用Joe自定义编辑器',
 	'介绍：开启后，文章编辑器将替换成Joe编辑器 <br>

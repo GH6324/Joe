@@ -303,9 +303,9 @@ document.addEventListener('DOMContentLoaded', () => {
 					content: this.getAttribute('content') || '消息内容'
 				};
 				this.innerHTML = `
-					<span class="joe_message ${this.options.type}">
-						<span class="joe_message__icon"></span>
-						<span class="joe_message__content">${this.options.content}</span>
+					<span class="joe_mail ${this.options.type}">
+						<span class="joe_mail__icon"></span>
+						<span class="joe_mail__content">${this.options.content}</span>
 					</span>
 				`;
 			}
