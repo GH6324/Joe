@@ -3,7 +3,7 @@
 
 /**
  * 环境要求：<br>PHP 7.4+<br>Typecho 1.2.1+
- * @package Joe再续前缘修改版
+ * @package Joe修改版
  * @author Joe、易航、jd82k
  * @link https://github.com/jd82k/Joe
  */

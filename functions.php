@@ -39,7 +39,7 @@ function themeConfig($form)
 	<div class="joe_config">
 		<div>
 			<div class="joe_config__aside">
-				<div class="logo">Joe再续前缘修改版<?= JOE_VERSION ?></div>
+				<div class="logo">Joe修改版<?= JOE_VERSION ?></div>
 				<ul class="tabs">
 					<li class="item" data-current="joe_notice">最新公告</li>
 					<li class="item" data-current="joe_global">全局设置</li>

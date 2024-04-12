@@ -1,4 +1,4 @@
-# Joe再续前缘修改版
+# Joe修改版
 
 > Telegram 群组: https://t.me/JoeModified
 

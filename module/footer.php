@@ -104,7 +104,7 @@ if ($this->options->JPendant_SSL == 'on') {
 	Typecho_Cookie::delete('__typecho_notice');
 	Typecho_Cookie::delete('__typecho_notice_type');
 	?>
-	console.log("%cTheme By Joe再续前缘修改版", "color:#fff; background: linear-gradient(270deg, #986fee, #8695e6, #68b7dd, #18d7d3); padding: 8px 15px; border-radius: 0 15px 0 15px");
+	console.log("%cTheme By Joe修改版", "color:#fff; background: linear-gradient(270deg, #986fee, #8695e6, #68b7dd, #18d7d3); padding: 8px 15px; border-radius: 0 15px 0 15px");
 	<?php $this->options->JCustomScript() ?>
 </script>
 
