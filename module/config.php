@@ -14,7 +14,7 @@
 		return i > 0 && parseInt(n.substring(i + 5, n.indexOf(".", i)), 10)
 	};
 	detectIE() && (alert('当前站点不支持IE浏览器或您开启了兼容模式，请使用其他浏览器访问或关闭兼容模式。'), (location.href = 'https://www.baidu.com'));
-	localStorage.getItem("data-night") && document.querySelector("html").setAttribute("data-night", "night");
+	
 	window.Joe = {
 		TITLE: `<?php $this->options->title() ?>`,
 		THEME_URL: `<?php $this->options->themeUrl() ?>`,
@@ -28,7 +28,8 @@
 		LAZY_LOAD: `<?php joe\getLazyload() ?>`,
 		BIRTHDAY: `<?php $this->options->JBirthDay() ?>`,
 		MOTTO: `<?php joe\getAsideAuthorMotto() ?>`,
-		PAGE_SIZE: `<?php $this->parameter->pageSize() ?>`
+		PAGE_SIZE: `<?php $this->parameter->pageSize() ?>`,
+		AUTO_NIGHT: `<?php $this->options->JAutoNight() ?>`,
 	}
 </script>
 <?php

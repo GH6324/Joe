@@ -64,7 +64,9 @@ $Jcomment_showGeoIp = new Typecho_Widget_Helper_Form_Element_Select(
 	),
 	'on',
 	'是否展示评论者IPv4归属地',
-	'介绍：开启后，会显示评论者IPv4归属地信息，如果评论者使用IPv6来访，会显示未知'
+	'介绍：开启后，会显示评论者IPv4归属地信息，如果评论者使用IPv6来访，会显示未知<br>
+		如果网站开启了CDN，请在config.inc.php配置__TYPECHO_IP_SOURCE__字段为对应CDN的真实IP的header头<br>
+		例如使用Cloudflare的header头为CF-Connecting-IP'
 );
 $Jcomment_showGeoIp->setAttribute('class', 'joe_content joe_comment');
 $form->addInput($Jcomment_showGeoIp->multiMode());

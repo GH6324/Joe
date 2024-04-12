@@ -2,6 +2,16 @@
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
+$JAutoNight = new Typecho_Widget_Helper_Form_Element_Select(
+	'JAutoNight',
+	array('on' => '开启（默认）', 'off' => '关闭'),
+	'on',
+	'是否开启主题自动黑夜模式',
+	'介绍：开启后21时~6时为夜间模式，其他时间为白天模式'
+);
+$JAutoNight->setAttribute('class', 'joe_content joe_decoration');
+$form->addInput($JAutoNight->multiMode());
+
 $JLoading = new Typecho_Widget_Helper_Form_Element_Select(
 	'JLoading',
 	array('on' => '开启（默认）', 'off' => '关闭'),

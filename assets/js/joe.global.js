@@ -71,27 +71,79 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	/* 初始化昼夜模式 */
 	{
-		if (localStorage.getItem("data-night")) {
-			$(".joe_action_item.mode .icon-1").addClass("active");
-			$(".joe_action_item.mode .icon-2").removeClass("active");
-		} else {
-			$("html").removeAttr("data-night");
-			$(".joe_action_item.mode .icon-1").removeClass("active");
-			$(".joe_action_item.mode .icon-2").addClass("active");
-		}
-		$(".joe_action_item.mode").on("click", () => {
-			if (localStorage.getItem("data-night")) {
-				$(".joe_action_item.mode .icon-1").removeClass("active");
-				$(".joe_action_item.mode .icon-2").addClass("active");
-				$("html").removeAttr("data-night");
-				localStorage.removeItem("data-night");
-			} else {
+		//如果配置了自动昼夜模式，则按时间显示一直到关闭浏览器cookie清除
+		if(Joe.AUTO_NIGHT == "on"){
+			let night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+			if (night == "1") {
+				$("html").attr("data-night", "night");
 				$(".joe_action_item.mode .icon-1").addClass("active");
 				$(".joe_action_item.mode .icon-2").removeClass("active");
-				$("html").attr("data-night", "night");
-				localStorage.setItem("data-night", "night");
+			}else if (night == "0"){
+				$("html").removeAttr("data-night");
+				$(".joe_action_item.mode .icon-1").removeClass("active");
+				$(".joe_action_item.mode .icon-2").addClass("active");
+			} else {
+				let hours = new Date().getHours();		
+				if (hours < 6 || hours > 21) {
+					$("html").attr("data-night", "night");
+					$(".joe_action_item.mode .icon-1").addClass("active");
+					$(".joe_action_item.mode .icon-2").removeClass("active");
+				} else {
+					$("html").removeAttr("data-night");
+					$(".joe_action_item.mode .icon-1").removeClass("active");
+					$(".joe_action_item.mode .icon-2").addClass("active");
+				}
 			}
-		});
+			$(".joe_action_item.mode").on("click", () => {
+				let night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+				if (night == "1") {
+					$(".joe_action_item.mode .icon-1").removeClass("active");
+					$(".joe_action_item.mode .icon-2").addClass("active");
+					$("html").removeAttr("data-night");
+					document.cookie = "night=0; path=/";
+				} else if (night == "0") {
+					$(".joe_action_item.mode .icon-1").addClass("active");
+					$(".joe_action_item.mode .icon-2").removeClass("active");
+					$("html").attr("data-night", "night");
+					document.cookie = "night=1; path=/";
+				} else {
+					if ($("html").attr("data-night") == "night") {
+						$("html").removeAttr("data-night");
+						$(".joe_action_item.mode .icon-1").removeClass("active");
+						$(".joe_action_item.mode .icon-2").addClass("active");
+						document.cookie = "night=0; path=/";
+					} else {
+						$("html").attr("data-night", "night");
+						$(".joe_action_item.mode .icon-1").addClass("active");
+						$(".joe_action_item.mode .icon-2").removeClass("active");
+						document.cookie = "night=1; path=/";
+					}
+				}
+			});
+		}else{
+			if (localStorage.getItem("night")) {
+				$("html").attr("data-night", "night");
+				$(".joe_action_item.mode .icon-1").addClass("active");
+				$(".joe_action_item.mode .icon-2").removeClass("active");
+			} else {
+				$("html").removeAttr("data-night");
+				$(".joe_action_item.mode .icon-1").removeClass("active");
+				$(".joe_action_item.mode .icon-2").addClass("active");
+			}
+			$(".joe_action_item.mode").on("click", () => {
+				if (localStorage.getItem("night")) {
+					$(".joe_action_item.mode .icon-1").removeClass("active");
+					$(".joe_action_item.mode .icon-2").addClass("active");
+					$("html").removeAttr("data-night");
+					localStorage.removeItem("night");
+				} else {
+					$(".joe_action_item.mode .icon-1").addClass("active");
+					$(".joe_action_item.mode .icon-2").removeClass("active");
+					$("html").attr("data-night", "night");
+					localStorage.setItem("night", "1");
+				}
+			});
+		}
 	}
 
 	/* 动态背景 */
