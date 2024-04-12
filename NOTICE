@@ -1,4 +1,4 @@
-<p class="title">最新版本：1.1.4 </p>
+<p class="title">最新版本：1.1.5 </p>
 <span style="line-height: normal;"><br></span>
 <span style="line-height: normal;">最新版下载地址：</span><a href="https://github.com/jd82k/Joe" target="_blank" rel="noopener noreferrer">https://github.com/jd82k/Joe</a>
 <br>修改简介：本主题是继前人<a href="http://blog.bri6.cn/" target="_blank" rel="noopener noreferrer">易航</a>修改原作者<a href="https://78.al/">Joe</a>主题后的第二次修改，具体更新如下
@@ -7,6 +7,8 @@
 	<li>继承易航修改的Joe再续前缘版，Joe再续前缘版的修改细节请到<a href="http://blog.bri6.cn/archives/18.html" target="_blank" rel="noopener noreferrer">http://blog.bri6.cn/archives/18.html</a>查看</li>
 	<li>修复主题php文件可被直接执行的重大漏洞</li>
 	<li>优化禁止爬虫的逻辑，网站安全得到提升</li>
+	<li>增加了评论显示ip位置的功能</li>
+	<li>增加了自动昼夜模式切换功能</li>
 	<li>大部分CDN资源（css、js、图片等）本地化，防止CDN失效，也方便自行整合静态资源CDN</li>
 	<li>恢复部分被压缩的源代码，保证基本上所有代码全部为可读未压缩的状态</li>
 	<li>删除无用功能：百度收录，增加声明文章为转载的功能</li>
