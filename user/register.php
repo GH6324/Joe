@@ -34,7 +34,7 @@ $this->need('user/header.php');
 					<input class="form-control" type="text" id="email" placeholder="邮箱">
 				</div>
 				<?php
-				if (joe\email_config()) {
+				if (joe\email_config() && Helper::options()->JUser_EmailCheck == "on") {
 				?>
 					<div class="form-group">
 						<label>验证码</label>
@@ -60,7 +60,7 @@ $this->need('user/header.php');
 			<?php
 			if ($this->options->allowRegister) {
 			?>
-				<p class="text-muted">已有账号? <a href="./login<?php echo isset($_GET['from']) ? '?from=' . urlencode($_GET['from']) : ''; ?>" class="text-dark ml-1"><b>登陆</b></a></p>
+				<p class="text-muted">已有账号? <a href="./login<?php echo isset($_GET['from']) ? '?from=' . urlencode($_GET['from']) : ''; ?>" class="text-dark ml-1"><b>登录</b></a></p>
 			<?php
 			}
 			?>
@@ -135,7 +135,7 @@ $this->need('user/header.php');
 				if (!username) return Qmsg.warning("请输入用户名");
 				if (!email) return Qmsg.warning("请输入邮箱");
 				<?php
-				if (joe\email_config()) {
+				if (joe\email_config() && Helper::options()->JUser_EmailCheck == "on") {
 				?>
 					if (!code) return Qmsg.warning("请输入验证码");
 				<?php

@@ -2,7 +2,7 @@
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
-define('JOE_VERSION', '1.1.5');
+define('JOE_VERSION', '1.1.6');
 define('JOE_ROOT', dirname(__FILE__) . '/');
 
 /* Joe核心文件 */
@@ -39,7 +39,7 @@ function themeConfig($form)
 	<div class="joe_config">
 		<div>
 			<div class="joe_config__aside">
-				<div class="logo">Joe修改版<?= JOE_VERSION ?></div>
+				<div class="logo">Joe修改版 v<?= JOE_VERSION ?></div>
 				<ul class="tabs">
 					<li class="item" data-current="joe_notice">最新公告</li>
 					<li class="item" data-current="joe_global">全局设置</li>
@@ -49,7 +49,7 @@ function themeConfig($form)
 					<li class="item" data-current="joe_aside">侧栏设置</li>
 					<li class="item" data-current="joe_index">首页设置</li>
 					<li class="item" data-current="joe_decoration">特效设置</li>
-					<li class="item" data-current="joe_user">登录设置</li>
+					<li class="item" data-current="joe_user">登录注册</li>
 					<li class="item" data-current="joe_music">音乐设置</li>
 					<li class="item" data-current="joe_friend">友链设置</li>
 					<li class="item" data-current="joe_comment">评论设置</li>
@@ -85,7 +85,7 @@ function themeConfig($form)
 	// 特效设置
 	require_once('options/decoration.php');
 
-	// 登录设置
+	// 登录注册
 	require_once('options/user.php');
 
 	// 音乐设置

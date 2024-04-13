@@ -84,7 +84,7 @@ switch ($action) {
 			'code' => 0,
 			'msg' => '请输入邮箱'
 		]);
-		if (joe\email_config()) {
+		if (joe\email_config() && Helper::options()->JUser_EmailCheck == "on") {
 			if (!isset($code)) $this->response->throwJson([
 				'code' => 0,
 				'msg' => '请输入验证码'
@@ -138,7 +138,7 @@ switch ($action) {
 				'msg' => '你输入的邮箱已经注册账号'
 			]);
 		}
-		if (joe\email_config()) {
+		if (joe\email_config() && Helper::options()->JUser_EmailCheck == "on") {
 			if ($_SESSION["Gm_Reg_Code"] != $code || $_SESSION["Gm_Reg_Email"] != trim($email)) {
 				$this->response->throwJson([
 					'code' => 0,

@@ -44,7 +44,7 @@ $this->need('user/header.php');
 			<?php
 			if ($this->options->allowRegister) {
 			?>
-				<p class="text-muted">返回 <a href="./login<?php echo isset($_GET['from']) ? '?from=' . urlencode($_GET['from']) : ''; ?>" class="text-dark ml-1"><b>登陆</b></a></p>
+				<p class="text-muted">返回 <a href="./login<?php echo isset($_GET['from']) ? '?from=' . urlencode($_GET['from']) : ''; ?>" class="text-dark ml-1"><b>登录</b></a></p>
 			<?php
 			}
 			?>

@@ -23,3 +23,13 @@ $JUser_Forget = new Typecho_Widget_Helper_Form_Element_Select(
 );
 $JUser_Forget->setAttribute('class', 'joe_content joe_user');
 $form->addInput($JUser_Forget->multiMode());
+
+$JUser_EmailCheck = new Typecho_Widget_Helper_Form_Element_Select(
+	'JUser_EmailCheck',
+	array('on' => '开启', 'off' => '关闭（默认）'),
+	'off',
+	'验证注册邮箱',
+	'介绍：未配置邮箱无法发送验证码 访问地址：<a target="_blank" href="' . Typecho_Common::url('user/register', Helper::options()->index) . '">' . Typecho_Common::url('user/register', Helper::options()->index) . '</a>'
+);
+$JUser_EmailCheck->setAttribute('class', 'joe_content joe_user');
+$form->addInput($JUser_EmailCheck->multiMode());

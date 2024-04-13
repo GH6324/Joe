@@ -52,4 +52,20 @@
 <?php endif; ?>
 <script src="<?= joe\theme_url('assets/js/joe.global.min.js'); ?>"></script>
 <script src="<?= joe\theme_url('assets/js/joe.short.min.js'); ?>"></script>
+<script>
+    $(document).keyup(function(e){
+        let key = e.which;
+        if(key==13){
+            if ($('#login').length > 0) { 
+                $('#login').click();
+            }
+            if ($('#register').length > 0) { 
+                $('#register').click();
+            }
+            if ($('#check').length > 0) { 
+                $('#check').click();
+            }
+        }
+    });
+</script>
 <?php $this->options->JCustomHeadEnd() ?>
