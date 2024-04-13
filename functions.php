@@ -1,8 +1,7 @@
 <?php
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
-
-define('JOE_VERSION', '1.1.6');
+define('JOE_VERSION', '1.1.7');
 define('JOE_ROOT', dirname(__FILE__) . '/');
 
 /* Joe核心文件 */

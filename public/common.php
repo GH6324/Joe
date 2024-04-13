@@ -84,7 +84,6 @@ function themeInit($self)
 				_getstatistics($self);
 				break;
 		}
-		;
 	}
 
 	if (Helper::options()->JUser_Switch == 'on') {

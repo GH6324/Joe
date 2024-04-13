@@ -181,17 +181,16 @@ function getAvatarByMail($mail)
 		echo $gravatarsUrl . $md5MailLower . '?d=mm';
 	}
 }
-;
+
 
 /* 获取侧边栏随机一言 */
 function getAsideAuthorMotto()
 {
-	if(is_null(\Helper::options()->JAside_Author_Motto)) {
-		$JMottoRandom = array();
+	if(empty(\Helper::options()->JAside_Author_Motto)) {
+		$JMottoRandom = array("");
 	}else{
 		$JMottoRandom = preg_split('/\R/', \Helper::options()->JAside_Author_Motto);
 	}
-	
 	echo $JMottoRandom[array_rand($JMottoRandom, 1)];
 }
 
