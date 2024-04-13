@@ -189,7 +189,11 @@ function getAsideAuthorMotto()
 	if(empty(\Helper::options()->JAside_Author_Motto)) {
 		$JMottoRandom = array("");
 	}else{
-		$JMottoRandom = preg_split('/\R/', \Helper::options()->JAside_Author_Motto);
+		if(strpos(\Helper::options()->JAside_Author_Motto,"\r\n") === false){
+			$JMottoRandom = explode("\n", \Helper::options()->JAside_Author_Motto);
+		}else{
+			$JMottoRandom = explode("\r\n", \Helper::options()->JAside_Author_Motto);
+		}
 	}
 	echo $JMottoRandom[array_rand($JMottoRandom, 1)];
 }
