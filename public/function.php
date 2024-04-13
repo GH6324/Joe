@@ -186,7 +186,11 @@ function getAvatarByMail($mail)
 /* 获取侧边栏随机一言 */
 function getAsideAuthorMotto()
 {
-	$JMottoRandom = explode("\r\n", \Helper::options()->JAside_Author_Motto);
+	if(isset(\Helper::options()->JAside_Author_Motto)){
+		$JMottoRandom = explode("\r\n", \Helper::options()->JAside_Author_Motto);
+	}else{
+		$JMottoRandom = array();
+	}
 	echo $JMottoRandom[array_rand($JMottoRandom, 1)];
 }
 
