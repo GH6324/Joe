@@ -4,7 +4,7 @@
 <img src="https://img.shields.io/badge/PHP-v7.4+-666699.svg?logo=php">
 <img src="https://img.shields.io/badge/Typecho-v1.2.1+-467b96.svg"><br>
 <span style="line-height: normal;">Telegram 群组: <a href="https://t.me/JoeModified" target="_blank" rel="noopener noreferrer">https://t.me/JoeModified</a></span><br>
-<span style="line-height: normal;">最新版<img src="https://img.shields.io/github/v/release/jd82k/Joe.svg?logo=git">下载地址：</span><a href="https://github.com/jd82k/Joe" target="_blank" rel="noopener noreferrer">https://github.com/jd82k/Joe</a><br>
+<span style="line-height: normal;">最新版下载地址：</span><a href="https://github.com/jd82k/Joe/releases" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/v/release/jd82k/Joe.svg?logo=git"></a><br>
 注意事项：
 <ol>
 	<li>版本要求： PHP 7.4 或更高，Typecho 1.2.1 或更高</li>
