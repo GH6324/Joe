@@ -1,4 +1,3 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -27,8 +26,8 @@
 
 <body>
 	<div id="dplayer"></div>
-	<script src="<?= joe\theme_url('assets/libs/hls/hls.min.js'); ?>"></script>
-	<script src="<?= joe\theme_url('assets/libs/DPlayer/DPlayer.min.js'); ?>"></script>
+	<script src="../assets/libs/hls/hls.min.js"></script>
+	<script src="../assets/libs/DPlayer/DPlayer.min.js"></script>
 	<script>
 		window.videoPlayer = new DPlayer({
 			container: document.getElementById('dplayer'), // 播放器容器元素

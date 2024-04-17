@@ -7,7 +7,7 @@ $JPrevent = new Typecho_Widget_Helper_Form_Element_Select(
 	array('on' => '开启', 'off' => '关闭（默认）'),
 	'off',
 	'是否开启QQ、微信防红拦截',
-	'介绍：开启后，如果在QQ里打开网站，则会提示跳转浏览器打开'
+	'介绍：开启后，如果在QQ、微信里打开网站，则会提示跳转浏览器打开'
 );
 $JPrevent->setAttribute('class', 'joe_content joe_safe');
 $form->addInput($JPrevent->multiMode());
