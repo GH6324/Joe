@@ -1,4 +1,4 @@
-import { undo, redo } from '@codemirror/history';
+import { undo, redo } from '@codemirror/commands';
 export default class JoeAction {
 	constructor() {
 		$('body').append(`
