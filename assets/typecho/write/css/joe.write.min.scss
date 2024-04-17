@@ -190,72 +190,72 @@ body.fullscreen {
 						}
 
 						// markdown - 标题
-						.cmt-heading {
+						.tok-heading {
 							color: #e06c75;
 						}
 
 						// markdown - 加粗
-						.cmt-strong {
+						.tok-strong {
 							color: #d19a66;
 							font-weight: bold;
 						}
 
 						// markdown - 倾斜
-						.cmt-emphasis {
+						.tok-emphasis {
 							color: #c678dd;
 							font-style: italic;
 						}
 
 						// markdown - 链接名称
-						.cmt-link[class="cmt-link"] {
+						.tok-link[class="tok-link"] {
 							color: #61afef;
 						}
 
 						// markdown - 链接
-						.cmt-url {
+						.tok-url {
 							color: #c678dd;
 							text-decoration: underline;
 							text-underline-position: under;
 						}
 
 						// 未知
-						.cmt-typeName {
+						.tok-typeName {
 							color: #d19a66;
 						}
-						.cmt-punctuation {
+						.tok-punctuation {
 							color: #808080;
 						}
-						.cmt-name {
+						.tok-name {
 							color: #d19a66;
 						}
-						.cmt-propertyName {
+						.tok-propertyName {
 							color: #96c0d8;
 						}
-						.cmt-string {
+						.tok-string {
 							color: #98c379;
 						}
-						.cmt-keyword {
+						.tok-keyword {
 							color: #c678dd;
 						}
-						.cmt-operator {
+						.tok-operator {
 							color: #96c0d8;
 						}
-						.cmt-variableName {
+						.tok-variableName {
 							color: #e06c75;
 						}
-						.cmt-number {
+						.tok-number {
 							color: #d19a66;
 						}
-						.cmt-comment {
+						.tok-comment {
 							color: #5c6370;
 						}
-						.cmt-processingInstruction {
+						.tok-processingInstruction {
 							color: #abb2bf;
 						}
-						.cmt-labelName {
+						.tok-labelName {
 							color: #abb2bf;
 						}
-						.cmt-atom {
+						.tok-atom {
 							color: #d19a66;
 						}
 						// 当前高亮行
