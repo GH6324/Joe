@@ -167,8 +167,9 @@ body.fullscreen {
 
 					.cm-line {
 						padding: 0;
-						&::selection {
+						&::selection, ::selection {
 							color: #61afef;
+							background-color: transparent !important;
 						}
 						// 选中匹配文本
 						.cm-selectionMatch {
@@ -406,9 +407,6 @@ body.fullscreen {
 	h4,
 	h5,
 	h6 {
-		color: #303133;
-		font-size: 18px;
-		line-height: 24px;
 		margin: 0;
 		margin-bottom: 15px;
 		position: relative;
