@@ -54,7 +54,7 @@ class MusicPlayer {
 			}
 		}
 		this.PLAYER.on('loadeddata', () => {
-			this.OPTIONS['autotheme'] ? this.autoTheme(this.PLAYER.list.index) : null
+			this.OPTIONS['autotheme'] === ("true" || "1") ? this.autoTheme(this.PLAYER.list.index) : null
 		})
 		this.PLAYER.on('error', () => {
 			this.PLAYER.skipForward()

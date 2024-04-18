@@ -31,12 +31,12 @@
 	<script>
 		window.videoPlayer = new DPlayer({
 			container: document.getElementById('dplayer'), // 播放器容器元素
-			autoplay: <?= isset($_GET['autoplay']) && $_GET['autoplay'] == "1"  ? 'true' : 'false' ?>, // 视频自动播放
+			autoplay: <?= isset($_GET['autoplay']) && $_GET['autoplay'] == ("true" || "1")  ? 'true' : 'false' ?>, // 视频自动播放
 			theme: '<?= isset($_GET['theme']) ? $_GET['theme'] : '#409eff' ?>', // 主题色
 			// lang: '', // 可选值: 'en', 'zh-cn', 'zh-tw'
 			preload: '<?= (isset($_GET['pic']) && $_GET['pic'] != 'null') ? 'metadata' : 'auto' ?>', // 视频预加载，可选值: 'none', 'metadata', 'auto'
-			loop: <?= isset($_GET['loop']) ? 'true' : 'false' ?>, // 视频循环播放
-			screenshot: <?= isset($_GET['screenshot']) && $_GET['screenshot'] == "1" ? 'true' : 'false' ?>, // 开启截图，如果开启，视频和视频封面需要允许跨域
+			loop: <?= isset($_GET['loop']) && $_GET['loop'] == ("true" || "1") ? 'true' : 'false' ?>, // 视频循环播放
+			screenshot: <?= isset($_GET['screenshot']) && $_GET['screenshot'] == ("true" || "1") ? 'true' : 'false' ?>, // 开启截图，如果开启，视频和视频封面需要允许跨域
 			airplay: true, // 在 Safari 中开启 AirPlay
 			volume: 1, // 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
 			playbackSpeed: [2.00, 1.75, 1.50, 1.25, 1.00, 0.75, 0.50, 0.25], // 可选的播放速率，可以设置成自定义的数组

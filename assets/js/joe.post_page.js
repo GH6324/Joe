@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				const url = $(this).attr('data-src');
 				let alt = $(this).attr('alt');
 				$('.joe_detail__article-video .play iframe').attr({
-					src: player + url + '&autoplay=1&screenshot=1&theme=' + encodeURIComponent(getComputedStyle(document.documentElement).getPropertyValue('--theme').trim())
+					src: player + url + '&autoplay=true&screenshot=true&theme=' + encodeURIComponent(getComputedStyle(document.documentElement).getPropertyValue('--theme').trim())
 				});
 				alt ? $('.joe_detail__article-video .play .title').html(alt) : null;
 			});

@@ -390,8 +390,30 @@ export default class JoeAction {
 				<div class="fitem">
 					<label>自动播放</label>
 					<select name="autoplay">
-						<option value="1" selected>是</option>
-						<option value="0">否</option>
+						<option value="true" selected>是</option>
+						<option value="false">否</option>
+					</select>
+				</div>
+				<div class="fitem">
+					<label>循环播放</label>
+					<select name="loop">
+						<option value="none" selected>不循环</option>
+						<option value="one">循环一次</option>
+						<option value="all">始终循环</option>
+					</select>
+				</div>
+				<div class="fitem">
+					<label>播放顺序</label>
+					<select name="order">
+						<option value="list" selected>列表循环</option>
+						<option value="random">随机循环</option>
+					</select>
+				</div>
+				<div class="fitem">
+					<label>自动主题色</label>
+					<select name="autotheme">
+						<option value="true" selected>是</option>
+						<option value="false">否</option>
 					</select>
 				</div>
             `,
@@ -399,7 +421,10 @@ export default class JoeAction {
 				const id = $(".cm-modal input[name='id']").val();
 				const color = $(".cm-modal input[name='color']").val();
 				const autoplay = $(".cm-modal select[name='autoplay']").val();
-				const str = `\n{${type ? 'music-list' : 'music'} id="${id}" color="${color}" ${autoplay === '1' ? 'autoplay="autoplay"' : ''}/}\n\n`;
+				const loop = $(".cm-modal select[name='loop']").val();
+				const autotheme = $(".cm-modal select[name='autotheme']").val();
+				const order =  $(".cm-modal select[name='order']").val();
+				const str = `\n{${type ? 'music-list' : 'music'} id="${id}" loop="${loop}" autotheme="${autotheme}" order="${order}" color="${color}" autoplay="${autoplay}"}/}\n\n`;
 				if (this._getLineCh(cm)) this._replaceSelection(cm, '\n' + str);
 				else this._replaceSelection(cm, str);
 				cm.focus();
@@ -437,10 +462,44 @@ export default class JoeAction {
 					<label>视频地址</label>
 					<input autocomplete="off" name="src" placeholder="请输入视频地址"/>
 				</div>
+				<div class="fitem">
+					<label>视频封面</label>
+					<input autocomplete="off" name="pic" placeholder="请输入视频封面地址"/>
+				</div>
+				<div class="fitem">
+					<label>主题色彩</label>
+					<input autocomplete="off" name="theme" placeholder="十六进制，留空则使用全局主题色"/>
+				</div>
+				<div class="fitem">
+					<label>自动播放</label>
+					<select name="autoplay">
+						<option value="true" selected>是</option>
+						<option value="false">否</option>
+					</select>
+				</div>
+				<div class="fitem">
+					<label>循环播放</label>
+					<select name="loop">
+						<option value="false" selected>否</option>
+						<option value="true">是</option>
+					</select>
+				</div>
+				<div class="fitem">
+					<label>视频截图</label>
+					<select name="screenshot">
+						<option value="true" selected>是</option>
+						<option value="false">否</option>
+					</select>
+				</div>
             `,
 			confirm: () => {
 				const src = $(".cm-modal input[name='src']").val();
-				const str = `\n{dplayer src="${src}"/}\n\n`;
+				const pic = $(".cm-modal input[name='pic']").val();
+				const theme = $(".cm-modal input[name='theme']").val();
+				const autoplay = $(".cm-modal select[name='autoplay']").val();
+		        const loop = $(".cm-modal select[name='loop']").val();
+		        const screenshot = $(".cm-modal select[name='screenshot']").val();
+				const str = `\n{dplayer src="${src}" pic="${pic}" theme="${theme}" autoplay="${autoplay}" loop="${loop}" screenshot="${screenshot}"/}\n\n`;
 				if (this._getLineCh(cm)) this._replaceSelection(cm, '\n' + str);
 				else this._replaceSelection(cm, str);
 				cm.focus();
@@ -720,6 +779,14 @@ export default class JoeAction {
 					<input autocomplete="off" name="name" placeholder="请输入音频名称"/>
 				</div>
 				<div class="fitem">
+					<label>音频作者</label>
+					<input autocomplete="off" name="artist" placeholder="请输入音频作者"/>
+				</div>
+				<div class="fitem">
+					<label>lrc地址</label>
+					<input autocomplete="off" name="lrc" placeholder="请输入lrc文件地址"/>
+				</div>
+				<div class="fitem">
 					<label>音频地址</label>
 					<input autocomplete="off" name="url" placeholder="请输入音频地址"/>
 				</div>
@@ -732,20 +799,39 @@ export default class JoeAction {
 					<input style="width: 44px;padding: 0 2px;flex: none" autocomplete="off" value="#f0ad4e" name="theme" type="color"/>
 				</div>
 				<div class="fitem">
+					<label>循环播放</label>
+					<select name="loop">
+						<option value="none" selected>不循环</option>
+						<option value="one">循环一次</option>
+						<option value="all">始终循环</option>
+					</select>
+				</div>
+				<div class="fitem">
 					<label>自动播放</label>
 					<select name="autoplay">
-						<option value="1" selected>是</option>
-						<option value="0">否</option>
+						<option value="true" selected>是</option>
+						<option value="false">否</option>
+					</select>
+				</div>
+				<div class="fitem">
+					<label>自动主题色</label>
+					<select name="autotheme">
+						<option value="true" selected>是</option>
+						<option value="false">否</option>
 					</select>
 				</div>
             `,
 			confirm: () => {
 				const name = $(".cm-modal input[name='name']").val();
+				const artist = $(".cm-modal input[name='artist']").val();
+				const lrc = $(".cm-modal input[name='lrc']").val();
 				const url = $(".cm-modal input[name='url']").val();
 				const cover = $(".cm-modal input[name='cover']").val();
 				const theme = $(".cm-modal input[name='theme']").val();
+				const loop = $(".cm-modal select[name='loop']").val();
 				const autoplay = $(".cm-modal select[name='autoplay']").val();
-				const str = `\n{mp3 name="${name}" url="${url}" cover="${cover}" theme="${theme}" ${autoplay === '1' ? 'autoplay="autoplay"' : ''}/}\n\n`;
+				const autotheme = $(".cm-modal select[name='autotheme']").val();
+				const str = `\n{mp3 name="${name}" artist="${artist}" lrc="${lrc}" url="${url}" cover="${cover}" theme="${theme}" loop="${loop}" autoplay="${autoplay}" autotheme="${autotheme}"/}\n\n`;
 				if (this._getLineCh(cm)) this._replaceSelection(cm, '\n' + str);
 				else this._replaceSelection(cm, str);
 				cm.focus();
