@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					url: this.getAttribute('url'),
 					theme: this.getAttribute('theme') || '#1989fa',
 					cover: this.getAttribute('cover'),
-					autoplay: this.getAttribute('autoplay') === ("true" || "1") ? true : false,
+					autoplay: this.getAttribute('autoplay') === "true" || this.getAttribute('autoplay') === "1" ? true : false,
 					loop: this.getAttribute('loop'),
 					artist: this.getAttribute('artist'),
 					lrc: this.getAttribute('lrc'),
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				this.options = {
 					id: this.getAttribute('id'),
 					color: this.getAttribute('color') || '#1989fa',
-					autoplay: this.getAttribute('autoplay') === ("true" || "1") ? true : false,
+					autoplay: this.getAttribute('autoplay') === "true" || this.getAttribute('autoplay') === "1" ? true : false,
 					autotheme: this.getAttribute('autotheme'),
 					loop: this.getAttribute('loop')
 				};
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				this.options = {
 					id: this.getAttribute('id'),
 					color: this.getAttribute('color') || '#1989fa',
-					autoplay: this.getAttribute('autoplay') === ("true" || "1") ? true : false,
+					autoplay: this.getAttribute('autoplay') === "true" || this.getAttribute('autoplay') === "1" ? true : false,
 					autotheme: this.getAttribute('autotheme'),
 					loop: this.getAttribute('loop'),
 					order: this.getAttribute('order')
@@ -548,9 +548,9 @@ document.addEventListener('DOMContentLoaded', () => {
 					src: this.getAttribute('src'),
 					pic: this.getAttribute('pic'),
 					theme: encodeURIComponent(this.getAttribute('theme') ? this.getAttribute('theme') : (getComputedStyle(document.getElementsByTagName('body')[0]).getPropertyValue('--theme') ? getComputedStyle(document.getElementsByTagName('body')[0]).getPropertyValue('--theme') : getComputedStyle(document.documentElement).getPropertyValue('--theme')).trim()),
-					autoplay: this.getAttribute('autoplay') === ("true" || "1") ? true : false,
-					loop: this.getAttribute('loop') === ("true" || "1") ? true : false,
-					screenshot: this.getAttribute('screenshot') === ("true" || "1") ? true : false,
+					autoplay: this.getAttribute('autoplay') === "true" || this.getAttribute('autoplay') === "1" ? true : false,
+					loop: this.getAttribute('loop') === "true" || this.getAttribute('loop') === "1" ? true : false,
+					screenshot: this.getAttribute('screenshot') === "true" || this.getAttribute('screenshot') === "1" ? true : false,
 					player: this.getAttribute('player')
 				};
 				this.render();
