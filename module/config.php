@@ -19,7 +19,7 @@
 		TITLE: `<?php $this->options->title() ?>`,
 		THEME_URL: `<?php $this->options->themeUrl() ?>`,
 		LIVE2D: `<?php $this->options->JLive2d() ?>`,
-		BASE_API: `<?php echo $this->options->rewrite == 0 ? Helper::options()->rootUrl . '/index.php/joe/api' : Helper::options()->rootUrl . '/joe/api' ?>`,
+		BASE_API: `<?php echo $this->options->rewrite == 0 ? $this->options->rootUrl . '/index.php/joe/api' : $this->options->rootUrl . '/joe/api' ?>`,
 		DYNAMIC_BACKGROUND: `<?php $this->options->JDynamic_Background() ?>`,
 		IS_MOBILE: /windows phone|iphone|android/gi.test(window.navigator.userAgent),
 		//BAIDU_PUSH: <?php //echo $this->options->JBaiduToken ? 'true' : 'false' ?>,
