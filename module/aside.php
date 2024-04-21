@@ -15,7 +15,7 @@
 			</div>
 			<div class="item" title="累计评论数">
 				<span class="num"><?php echo number_format($item->publishedCommentsNum); ?></span>
-				<span>评论量</span>
+				<span>评论数</span>
 			</div>
 		</div>
 		<?php if ($this->options->JAside_Author_Nav !== "off") : ?>
