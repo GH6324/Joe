@@ -45,10 +45,10 @@ $JIndex_Carousel_Target = new Typecho_Widget_Helper_Form_Element_Select(
 		'_blank' => '_blank（默认，新窗口）',
 		'_parent' => '_parent（当前窗口）',
 		'_self' => '_self（同窗口）',
-		'_top' => '_top（顶端打开窗口）',
+		'_top' => '_top（顶端打开窗口）'
 	),
 	'_blank',
-	'首页轮播图打开窗口方式',
+	'首页轮播图打开窗口方式'
 );
 $JIndex_Carousel_Target->setAttribute('class', 'joe_content joe_index');
 $form->addInput($JIndex_Carousel_Target->multiMode());
@@ -59,10 +59,10 @@ $Jessay_target = new Typecho_Widget_Helper_Form_Element_Select(
 		'_blank' => '_blank（新窗口）',
 		'_parent' => '_parent（当前窗口）',
 		'_self' => '_self（默认，同窗口）',
-		'_top' => '_top（顶端打开窗口）',
+		'_top' => '_top（顶端打开窗口）'
 	),
 	'_self',
-	'首页文章列表打开方式',
+	'首页文章列表打开方式'
 );
 $Jessay_target->setAttribute('class', 'joe_content joe_index');
 $form->addInput($Jessay_target->multiMode());

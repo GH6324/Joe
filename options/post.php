@@ -80,10 +80,10 @@ $Jsearch_target = new Typecho_Widget_Helper_Form_Element_Select(
 		'_blank' => '_blank（新窗口）',
 		'_parent' => '_parent（当前窗口）',
 		'_self' => '_self（默认，同窗口）',
-		'_top' => '_top（顶端打开窗口）',
+		'_top' => '_top（顶端打开窗口）'
 	),
 	'_self',
-	'其他页面文章列表打开方式',
+	'其他页面文章列表打开方式'
 );
 $Jsearch_target->setAttribute('class', 'joe_content joe_post');
 $form->addInput($Jsearch_target->multiMode());

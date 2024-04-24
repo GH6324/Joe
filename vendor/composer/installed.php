@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '7b1cfcfd40aa33efcbbb7b88f437578212e45cb1',
+        'reference' => '5933eb685f0d5594292aa5ee79d5a79b7fccff9f',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '7b1cfcfd40aa33efcbbb7b88f437578212e45cb1',
+            'reference' => '5933eb685f0d5594292aa5ee79d5a79b7fccff9f',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -22,12 +22,10 @@
         'network/http' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '068d37a97793c09efadfbe9564f361540580cd2e',
+            'reference' => '2549b40a842cf16beebc59c0358011e22d053833',
             'type' => 'library',
             'install_path' => __DIR__ . '/../network/http',
-            'aliases' => array(
-                0 => '9999999-dev',
-            ),
+            'aliases' => array(),
             'dev_requirement' => false,
         ),
         'phpmailer/phpmailer' => array(

@@ -4,36 +4,28 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5803cbb3bf8373a4a391717a1aece819",
+    "content-hash": "eacba46065b2d582f9ae17818d9adbe9",
     "packages": [
         {
             "name": "network/http",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/xh8039/php-net-request.git",
-                "reference": "068d37a97793c09efadfbe9564f361540580cd2e"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/xh8039/php-net-request/zipball/068d37a97793c09efadfbe9564f361540580cd2e",
-                "reference": "068d37a97793c09efadfbe9564f361540580cd2e",
-                "shasum": ""
+                "type": "path",
+                "url": "network/http",
+                "reference": "2549b40a842cf16beebc59c0358011e22d053833"
             },
             "require": {
-                "php": ">=7.4"
+                "php": ">=7.2"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
-                "files": [
-                    "src/helper.php"
-                ],
                 "psr-4": {
                     "network\\http\\": "src/"
-                }
+                },
+                "files": [
+                    "src/helper.php"
+                ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -44,11 +36,9 @@
                 }
             ],
             "description": "一款基于PHP的轻量级HTTP网络请求库",
-            "support": {
-                "issues": "https://github.com/xh8039/php-net-request/issues",
-                "source": "https://github.com/xh8039/php-net-request/tree/master"
-            },
-            "time": "2024-01-17T12:11:43+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "phpmailer/phpmailer",

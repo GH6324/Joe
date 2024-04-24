@@ -3,7 +3,7 @@
 
 ![release](https://img.shields.io/github/v/release/jd82k/Joe.svg?logo=git)
 ![license](https://img.shields.io/github/license/jd82k/Joe?logo=GitHub)
-![php](https://img.shields.io/badge/PHP-v7.4+-666699.svg?logo=php)
+![php](https://img.shields.io/badge/PHP-v7.2+-666699.svg?logo=php)
 ![typecho](https://img.shields.io/badge/Typecho-v1.2.1+-467b96.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAD/h4/MvwAAAAd0SU1FB+gEDQw3Dk+MOQUAAAEKSURBVEjHrZW9boMwFIU/rKjKYD8BHZkhE8+SCd6rz5Opm7cMHcsT2FLULu7gVA1gMOH23AVZOsf3x9xTMEVFS0NDiUFjAIfHMWCxvPPBIo50XAiZuNBxTNFrrlnyb1ypp/Qzt830QODGeXz7c/QoUf/Vvj35cSH3XvS76IFAFwXynV+eCFDtpgcC1YF2Mo+CHMLDd6tosoQ1NAdOK/obBBSlKINXhRYJaIURCZiCL15GR0tTSPfmW4nuBxR+dlM60vAKJ0rA/YPAIBIYFHZyVKzEHHYu8Bys+HcG4UJRwNvuAu5M8VIVr3UQG0vMQmRtsRf9JnPtH811/rqivZ8o0Rg04HF4PtP2/gPrHa+89Wx6HgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyNC0wNC0xM1QxMjo1NToxNCswMDowMEXzkBcAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjQtMDQtMTNUMTI6NTU6MTQrMDA6MDA0riirAAAAKHRFWHRkYXRlOnRpbWVzdGFtcAAyMDI0LTA0LTEzVDEyOjU1OjE0KzAwOjAwY7sJdAAAAABJRU5ErkJggg==)
 
 ## 注意事项
