@@ -28,10 +28,5 @@
 1. 感谢原作者Joe https://78.al
 2. 感谢修改者易航 http://blog.bri6.cn
 
-## 赞助
-作者修改Joe主题耗费了大量心血，如果喜欢本主题，欢迎通过爱发电捐款
-
-爱发电链接： https://afdian.net/a/jd82k
-
 ## 联系
 Telegram 群组: https://t.me/JoeModified
